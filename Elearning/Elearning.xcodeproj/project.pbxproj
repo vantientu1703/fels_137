@@ -14,6 +14,14 @@
 		303E0D521CED93450053A0FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 303E0D501CED93450053A0FD /* LaunchScreen.storyboard */; };
 		303E0D5D1CED93450053A0FD /* ElearningTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 303E0D5C1CED93450053A0FD /* ElearningTests.m */; };
 		303E0D681CED93450053A0FD /* ElearningUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 303E0D671CED93450053A0FD /* ElearningUITests.m */; };
+		EF3D8F951CEEBA5D00AF117D /* CategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8F941CEEBA5D00AF117D /* CategoriesViewController.m */; settings = {ASSET_TAGS = (); }; };
+		EF3D8FAB1CEEBAA100AF117D /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8F981CEEBAA100AF117D /* HomeViewController.m */; settings = {ASSET_TAGS = (); }; };
+		EF3D8FAC1CEEBAA100AF117D /* LessonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8F9B1CEEBAA100AF117D /* LessonViewController.m */; settings = {ASSET_TAGS = (); }; };
+		EF3D8FAD1CEEBAA100AF117D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8F9E1CEEBAA100AF117D /* LoginViewController.m */; settings = {ASSET_TAGS = (); }; };
+		EF3D8FAE1CEEBAA100AF117D /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8FA11CEEBAA100AF117D /* RegisterViewController.m */; settings = {ASSET_TAGS = (); }; };
+		EF3D8FAF1CEEBAA100AF117D /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8FA41CEEBAA100AF117D /* ResultViewController.m */; settings = {ASSET_TAGS = (); }; };
+		EF3D8FB01CEEBAA100AF117D /* UpdateProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8FA71CEEBAA100AF117D /* UpdateProfileViewController.m */; settings = {ASSET_TAGS = (); }; };
+		EF3D8FB11CEEBAA100AF117D /* WordsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8FAA1CEEBAA100AF117D /* WordsListViewController.m */; settings = {ASSET_TAGS = (); }; };
 		EFF77A6E1CEDA6F300EAFAD5 /* SecondStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFF77A6D1CEDA6F300EAFAD5 /* SecondStoryboard.storyboard */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -49,6 +57,22 @@
 		303E0D631CED93450053A0FD /* ElearningUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElearningUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		303E0D671CED93450053A0FD /* ElearningUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ElearningUITests.m; sourceTree = "<group>"; };
 		303E0D691CED93450053A0FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF3D8F931CEEBA5D00AF117D /* CategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesViewController.h; sourceTree = "<group>"; };
+		EF3D8F941CEEBA5D00AF117D /* CategoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesViewController.m; sourceTree = "<group>"; };
+		EF3D8F971CEEBAA100AF117D /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		EF3D8F981CEEBAA100AF117D /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		EF3D8F9A1CEEBAA100AF117D /* LessonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LessonViewController.h; sourceTree = "<group>"; };
+		EF3D8F9B1CEEBAA100AF117D /* LessonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LessonViewController.m; sourceTree = "<group>"; };
+		EF3D8F9D1CEEBAA100AF117D /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		EF3D8F9E1CEEBAA100AF117D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		EF3D8FA01CEEBAA100AF117D /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		EF3D8FA11CEEBAA100AF117D /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		EF3D8FA31CEEBAA100AF117D /* ResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
+		EF3D8FA41CEEBAA100AF117D /* ResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
+		EF3D8FA61CEEBAA100AF117D /* UpdateProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateProfileViewController.h; sourceTree = "<group>"; };
+		EF3D8FA71CEEBAA100AF117D /* UpdateProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateProfileViewController.m; sourceTree = "<group>"; };
+		EF3D8FA91CEEBAA100AF117D /* WordsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordsListViewController.h; sourceTree = "<group>"; };
+		EF3D8FAA1CEEBAA100AF117D /* WordsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordsListViewController.m; sourceTree = "<group>"; };
 		EFF77A6D1CEDA6F300EAFAD5 /* SecondStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SecondStoryboard.storyboard; path = Storyboards/SecondStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,6 +165,86 @@
 			path = ElearningUITests;
 			sourceTree = "<group>";
 		};
+		EF3D8F921CEEBA5D00AF117D /* CategoriesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EF3D8F931CEEBA5D00AF117D /* CategoriesViewController.h */,
+				EF3D8F941CEEBA5D00AF117D /* CategoriesViewController.m */,
+			);
+			name = CategoriesViewController;
+			path = ViewControllers/CategoriesViewController;
+			sourceTree = "<group>";
+		};
+		EF3D8F961CEEBAA100AF117D /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EF3D8F971CEEBAA100AF117D /* HomeViewController.h */,
+				EF3D8F981CEEBAA100AF117D /* HomeViewController.m */,
+			);
+			name = HomeViewController;
+			path = ViewControllers/HomeViewController;
+			sourceTree = "<group>";
+		};
+		EF3D8F991CEEBAA100AF117D /* LessonViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EF3D8F9A1CEEBAA100AF117D /* LessonViewController.h */,
+				EF3D8F9B1CEEBAA100AF117D /* LessonViewController.m */,
+			);
+			name = LessonViewController;
+			path = ViewControllers/LessonViewController;
+			sourceTree = "<group>";
+		};
+		EF3D8F9C1CEEBAA100AF117D /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EF3D8F9D1CEEBAA100AF117D /* LoginViewController.h */,
+				EF3D8F9E1CEEBAA100AF117D /* LoginViewController.m */,
+			);
+			name = LoginViewController;
+			path = ViewControllers/LoginViewController;
+			sourceTree = "<group>";
+		};
+		EF3D8F9F1CEEBAA100AF117D /* RegisterViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EF3D8FA01CEEBAA100AF117D /* RegisterViewController.h */,
+				EF3D8FA11CEEBAA100AF117D /* RegisterViewController.m */,
+			);
+			name = RegisterViewController;
+			path = ViewControllers/RegisterViewController;
+			sourceTree = "<group>";
+		};
+		EF3D8FA21CEEBAA100AF117D /* ResultViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EF3D8FA31CEEBAA100AF117D /* ResultViewController.h */,
+				EF3D8FA41CEEBAA100AF117D /* ResultViewController.m */,
+			);
+			name = ResultViewController;
+			path = ViewControllers/ResultViewController;
+			sourceTree = "<group>";
+		};
+		EF3D8FA51CEEBAA100AF117D /* UpdateProfileViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EF3D8FA61CEEBAA100AF117D /* UpdateProfileViewController.h */,
+				EF3D8FA71CEEBAA100AF117D /* UpdateProfileViewController.m */,
+			);
+			name = UpdateProfileViewController;
+			path = ViewControllers/UpdateProfileViewController;
+			sourceTree = "<group>";
+		};
+		EF3D8FA81CEEBAA100AF117D /* WordsListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EF3D8FA91CEEBAA100AF117D /* WordsListViewController.h */,
+				EF3D8FAA1CEEBAA100AF117D /* WordsListViewController.m */,
+			);
+			name = WordsListViewController;
+			path = ViewControllers/WordsListViewController;
+			sourceTree = "<group>";
+		};
 		EFF77A661CEDA2F200EAFAD5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +280,14 @@
 			children = (
 				303E0D451CED93450053A0FD /* AppDelegate.h */,
 				303E0D461CED93450053A0FD /* AppDelegate.m */,
+				EF3D8F9C1CEEBAA100AF117D /* LoginViewController */,
+				EF3D8F9F1CEEBAA100AF117D /* RegisterViewController */,
+				EF3D8F961CEEBAA100AF117D /* HomeViewController */,
+				EF3D8FA51CEEBAA100AF117D /* UpdateProfileViewController */,
+				EF3D8FA81CEEBAA100AF117D /* WordsListViewController */,
+				EF3D8F921CEEBA5D00AF117D /* CategoriesViewController */,
+				EF3D8F991CEEBAA100AF117D /* LessonViewController */,
+				EF3D8FA21CEEBAA100AF117D /* ResultViewController */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -326,7 +438,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				303E0D471CED93450053A0FD /* AppDelegate.m in Sources */,
+				EF3D8FAC1CEEBAA100AF117D /* LessonViewController.m in Sources */,
+				EF3D8FAD1CEEBAA100AF117D /* LoginViewController.m in Sources */,
+				EF3D8F951CEEBA5D00AF117D /* CategoriesViewController.m in Sources */,
+				EF3D8FAE1CEEBAA100AF117D /* RegisterViewController.m in Sources */,
 				303E0D441CED93450053A0FD /* main.m in Sources */,
+				EF3D8FAB1CEEBAA100AF117D /* HomeViewController.m in Sources */,
+				EF3D8FAF1CEEBAA100AF117D /* ResultViewController.m in Sources */,
+				EF3D8FB11CEEBAA100AF117D /* WordsListViewController.m in Sources */,
+				EF3D8FB01CEEBAA100AF117D /* UpdateProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +588,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Elearning/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.framgia.Elearning;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -479,6 +600,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Elearning/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.framgia.Elearning;
 				PRODUCT_NAME = "$(TARGET_NAME)";
