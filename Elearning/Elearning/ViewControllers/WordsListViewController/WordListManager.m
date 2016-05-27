@@ -41,7 +41,7 @@ NSString *const PARAM_GET_ALL_WORD_LIST = @"option=%@&page=%lu&auth_token=%@";
                                  }
                              }
                              dispatch_async(dispatch_get_main_queue(), ^{
-                                 if (self.delegate && [(NSObject*)self.delegate respondsToSelector:@selector(didReceiveWordListWithArray:message:withError:)]) {
+                                 if (self.delegate && [self.delegate respondsToSelector:@selector(didReceiveWordListWithArray:message:withError:)]) {
                                      [self.delegate didReceiveWordListWithArray:arrWords message:message withError:error];
                                  }
                              });

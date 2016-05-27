@@ -37,6 +37,9 @@ NSString *const AVATAR_ALERT_MESSAGE = @"Select a photo";
 NSString *const CANCEL_MESSAGE = @"Cancel";
 NSString *const CHOSSE_GALLERY_MESSAGE = @"Choose from Gallery";
 NSString *const TAKE_PHOTO_MESSAGE = @"Take Photo";
+NSString *const PAGE = @"page=";
+NSString *const PER_PAGE = @"per_page=";
+NSString *const USER_TOKEN = @"-Kx03yy94NhYc81Shz63_g";
 
 #pragma mark - Regex
 NSString *const EMAIL_FILTER_REGEX = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
