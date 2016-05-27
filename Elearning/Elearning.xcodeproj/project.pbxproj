@@ -35,6 +35,10 @@
 		30FA00EF1D090AA3006A5582 /* DataValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FA00EE1D090AA3006A5582 /* DataValidation.m */; };
 		30FA00F21D090AC4006A5582 /* StoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FA00F11D090AC4006A5582 /* StoreData.m */; };
 		CC9654C464C833B8DCFF6632 /* libPods-Elearning.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9BAE788895C61BBFDE065F /* libPods-Elearning.a */; };
+		EF081D6C1CF1EB07008D9EBF /* DBUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EF081D6B1CF1EB07008D9EBF /* DBUtil.m */; settings = {ASSET_TAGS = (); }; };
+		EF19B7EB1CF688D70085E921 /* WordListManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF19B7EA1CF688D70085E921 /* WordListManager.m */; settings = {ASSET_TAGS = (); }; };
+		EF19B7EF1CF68E590085E921 /* GetDataWithDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = EF19B7EE1CF68E590085E921 /* GetDataWithDictionary.m */; settings = {ASSET_TAGS = (); }; };
+		EF19B7F61CF6D0620085E921 /* WordListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF19B7F41CF6D0620085E921 /* WordListTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		EF3D8F951CEEBA5D00AF117D /* CategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8F941CEEBA5D00AF117D /* CategoriesViewController.m */; };
 		EF3D8FAB1CEEBAA100AF117D /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8F981CEEBAA100AF117D /* HomeViewController.m */; };
 		EF3D8FAC1CEEBAA100AF117D /* LessonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8F9B1CEEBAA100AF117D /* LessonViewController.m */; };
@@ -42,8 +46,18 @@
 		EF3D8FAE1CEEBAA100AF117D /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8FA11CEEBAA100AF117D /* RegisterViewController.m */; };
 		EF3D8FAF1CEEBAA100AF117D /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8FA41CEEBAA100AF117D /* ResultViewController.m */; };
 		EF3D8FB01CEEBAA100AF117D /* UpdateProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8FA71CEEBAA100AF117D /* UpdateProfileViewController.m */; };
-		EF3D8FB11CEEBAA100AF117D /* WordsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8FAA1CEEBAA100AF117D /* WordsListViewController.m */; };
-		EFF77A6E1CEDA6F300EAFAD5 /* SecondStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFF77A6D1CEDA6F300EAFAD5 /* SecondStoryboard.storyboard */; };
+		EF3D8FB11CEEBAA100AF117D /* WordsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8FAA1CEEBAA100AF117D /* WordsListViewController.m */; settings = {ASSET_TAGS = (); }; };
+		EF4C7BAD1D0525C70087E96C /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4C7BAC1D0525C70087E96C /* LoadingView.m */; settings = {ASSET_TAGS = (); }; };
+		EFD0F8CE1CF3E79B0084B877 /* next_2.png in Resources */ = {isa = PBXBuildFile; fileRef = EFD0F8CA1CF3E79B0084B877 /* next_2.png */; settings = {ASSET_TAGS = (); }; };
+		EFD0F8D01CF3E79B0084B877 /* pre_2.png in Resources */ = {isa = PBXBuildFile; fileRef = EFD0F8CC1CF3E79B0084B877 /* pre_2.png */; settings = {ASSET_TAGS = (); }; };
+		EFD0F8FC1CF40B1E0084B877 /* AnswerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD0F8FB1CF40B1E0084B877 /* AnswerItem.m */; settings = {ASSET_TAGS = (); }; };
+		EFD0F9051CF444B60084B877 /* false.png in Resources */ = {isa = PBXBuildFile; fileRef = EFD0F9021CF444B60084B877 /* false.png */; settings = {ASSET_TAGS = (); }; };
+		EFD0F9061CF444B60084B877 /* hoicham.png in Resources */ = {isa = PBXBuildFile; fileRef = EFD0F9031CF444B60084B877 /* hoicham.png */; settings = {ASSET_TAGS = (); }; };
+		EFD0F9071CF444B60084B877 /* true.png in Resources */ = {isa = PBXBuildFile; fileRef = EFD0F9041CF444B60084B877 /* true.png */; settings = {ASSET_TAGS = (); }; };
+		EFEC70CC1CEEFD6800D5BBEE /* WordItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEC70CB1CEEFD6800D5BBEE /* WordItem.m */; settings = {ASSET_TAGS = (); }; };
+		EFF050931CF822F4003A9CF5 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = EFF050911CF822F4003A9CF5 /* green.png */; settings = {ASSET_TAGS = (); }; };
+		EFF050941CF822F4003A9CF5 /* grey.png in Resources */ = {isa = PBXBuildFile; fileRef = EFF050921CF822F4003A9CF5 /* grey.png */; settings = {ASSET_TAGS = (); }; };
+		EFF77A6E1CEDA6F300EAFAD5 /* SecondStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFF77A6D1CEDA6F300EAFAD5 /* SecondStoryboard.storyboard */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +126,14 @@
 		30FA00F01D090AC4006A5582 /* StoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StoreData.h; path = Utilities/StoreData.h; sourceTree = "<group>"; };
 		30FA00F11D090AC4006A5582 /* StoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StoreData.m; path = Utilities/StoreData.m; sourceTree = "<group>"; };
 		A417F667E7D58A0D5CD47A32 /* Pods-Elearning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Elearning.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Elearning/Pods-Elearning.debug.xcconfig"; sourceTree = "<group>"; };
+		EF081D6A1CF1EB07008D9EBF /* DBUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBUtil.h; sourceTree = "<group>"; };
+		EF081D6B1CF1EB07008D9EBF /* DBUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBUtil.m; sourceTree = "<group>"; };
+		EF19B7E91CF688D70085E921 /* WordListManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WordListManager.h; path = ../ViewControllers/WordsListViewController/WordListManager.h; sourceTree = "<group>"; };
+		EF19B7EA1CF688D70085E921 /* WordListManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WordListManager.m; path = ../ViewControllers/WordsListViewController/WordListManager.m; sourceTree = "<group>"; };
+		EF19B7ED1CF68E590085E921 /* GetDataWithDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GetDataWithDictionary.h; path = ParseDataJSon/GetDataWithDictionary.h; sourceTree = "<group>"; };
+		EF19B7EE1CF68E590085E921 /* GetDataWithDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GetDataWithDictionary.m; path = ParseDataJSon/GetDataWithDictionary.m; sourceTree = "<group>"; };
+		EF19B7F31CF6D0620085E921 /* WordListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordListTableViewCell.h; sourceTree = "<group>"; };
+		EF19B7F41CF6D0620085E921 /* WordListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordListTableViewCell.m; sourceTree = "<group>"; };
 		EF3D8F931CEEBA5D00AF117D /* CategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesViewController.h; sourceTree = "<group>"; };
 		EF3D8F941CEEBA5D00AF117D /* CategoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesViewController.m; sourceTree = "<group>"; };
 		EF3D8F971CEEBAA100AF117D /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
@@ -128,6 +150,19 @@
 		EF3D8FA71CEEBAA100AF117D /* UpdateProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateProfileViewController.m; sourceTree = "<group>"; };
 		EF3D8FA91CEEBAA100AF117D /* WordsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordsListViewController.h; sourceTree = "<group>"; };
 		EF3D8FAA1CEEBAA100AF117D /* WordsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordsListViewController.m; sourceTree = "<group>"; };
+		EF4C7BAB1D0525C70087E96C /* LoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingView.h; sourceTree = "<group>"; };
+		EF4C7BAC1D0525C70087E96C /* LoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingView.m; sourceTree = "<group>"; };
+		EFD0F8CA1CF3E79B0084B877 /* next_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = next_2.png; path = Resources/next_2.png; sourceTree = "<group>"; };
+		EFD0F8CC1CF3E79B0084B877 /* pre_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pre_2.png; path = Resources/pre_2.png; sourceTree = "<group>"; };
+		EFD0F8FA1CF40B1E0084B877 /* AnswerItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnswerItem.h; path = Model/AnswerItem/AnswerItem.h; sourceTree = "<group>"; };
+		EFD0F8FB1CF40B1E0084B877 /* AnswerItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnswerItem.m; path = Model/AnswerItem/AnswerItem.m; sourceTree = "<group>"; };
+		EFD0F9021CF444B60084B877 /* false.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = false.png; path = Resources/false.png; sourceTree = "<group>"; };
+		EFD0F9031CF444B60084B877 /* hoicham.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hoicham.png; path = Resources/hoicham.png; sourceTree = "<group>"; };
+		EFD0F9041CF444B60084B877 /* true.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = true.png; path = Resources/true.png; sourceTree = "<group>"; };
+		EFEC70CA1CEEFD6800D5BBEE /* WordItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WordItem.h; path = Model/WordItem/WordItem.h; sourceTree = "<group>"; };
+		EFEC70CB1CEEFD6800D5BBEE /* WordItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WordItem.m; path = Model/WordItem/WordItem.m; sourceTree = "<group>"; };
+		EFF050911CF822F4003A9CF5 /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = green.png; path = Resources/green.png; sourceTree = "<group>"; };
+		EFF050921CF822F4003A9CF5 /* grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = grey.png; path = Resources/grey.png; sourceTree = "<group>"; };
 		EFF77A6D1CEDA6F300EAFAD5 /* SecondStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SecondStoryboard.storyboard; path = Storyboards/SecondStoryboard.storyboard; sourceTree = "<group>"; };
 		FA9BAE788895C61BBFDE065F /* libPods-Elearning.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Elearning.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -189,6 +224,8 @@
 				EFF77A6A1CEDA5AB00EAFAD5 /* ViewControllers */,
 				EFF77A671CEDA2FB00EAFAD5 /* Storyboards */,
 				EFF77A6C1CEDA61500EAFAD5 /* Model */,
+				EF19B7EC1CF68E170085E921 /* GetDataWithDictionary */,
+				EF081D661CF1D91B008D9EBF /* DBController */,
 				EFF77A6B1CEDA5BE00EAFAD5 /* Libraries */,
 				EFF77A661CEDA2F200EAFAD5 /* Resources */,
 				EFF77A691CEDA5A100EAFAD5 /* Services */,
@@ -280,6 +317,35 @@
 			name = AES;
 			sourceTree = "<group>";
 		};
+		EF081D661CF1D91B008D9EBF /* DBController */ = {
+			isa = PBXGroup;
+			children = (
+				EF19B7E91CF688D70085E921 /* WordListManager.h */,
+				EF19B7EA1CF688D70085E921 /* WordListManager.m */,
+				EF081D6A1CF1EB07008D9EBF /* DBUtil.h */,
+				EF081D6B1CF1EB07008D9EBF /* DBUtil.m */,
+			);
+			path = DBController;
+			sourceTree = "<group>";
+		};
+		EF081D701CF1ED35008D9EBF /* WordItem */ = {
+			isa = PBXGroup;
+			children = (
+				EFEC70CA1CEEFD6800D5BBEE /* WordItem.h */,
+				EFEC70CB1CEEFD6800D5BBEE /* WordItem.m */,
+			);
+			name = WordItem;
+			sourceTree = "<group>";
+		};
+		EF19B7EC1CF68E170085E921 /* GetDataWithDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				EF19B7ED1CF68E590085E921 /* GetDataWithDictionary.h */,
+				EF19B7EE1CF68E590085E921 /* GetDataWithDictionary.m */,
+			);
+			name = GetDataWithDictionary;
+			sourceTree = "<group>";
+		};
 		EF3D8F921CEEBA5D00AF117D /* CategoriesViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -357,15 +423,43 @@
 			children = (
 				EF3D8FA91CEEBAA100AF117D /* WordsListViewController.h */,
 				EF3D8FAA1CEEBAA100AF117D /* WordsListViewController.m */,
+				EF19B7F31CF6D0620085E921 /* WordListTableViewCell.h */,
+				EF19B7F41CF6D0620085E921 /* WordListTableViewCell.m */,
 			);
 			name = WordsListViewController;
 			path = ViewControllers/WordsListViewController;
+			sourceTree = "<group>";
+		};
+		EF4C7BAA1D0525C70087E96C /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				EF4C7BAB1D0525C70087E96C /* LoadingView.h */,
+				EF4C7BAC1D0525C70087E96C /* LoadingView.m */,
+			);
+			name = LoadingView;
+			path = ViewControllers/LoadingView;
+			sourceTree = "<group>";
+		};
+		EFD0F8F91CF40AF90084B877 /* AnswerItem */ = {
+			isa = PBXGroup;
+			children = (
+				EFD0F8FA1CF40B1E0084B877 /* AnswerItem.h */,
+				EFD0F8FB1CF40B1E0084B877 /* AnswerItem.m */,
+			);
+			name = AnswerItem;
 			sourceTree = "<group>";
 		};
 		EFF77A661CEDA2F200EAFAD5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				309A3CE61CF43609004F7F98 /* Images */,
+				EFF050911CF822F4003A9CF5 /* green.png */,
+				EFF050921CF822F4003A9CF5 /* grey.png */,
+				EFD0F9021CF444B60084B877 /* false.png */,
+				EFD0F9031CF444B60084B877 /* hoicham.png */,
+				EFD0F8CA1CF3E79B0084B877 /* next_2.png */,
+				EFD0F8CC1CF3E79B0084B877 /* pre_2.png */,
+				EFD0F9041CF444B60084B877 /* true.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -399,6 +493,7 @@
 			children = (
 				303E0D451CED93450053A0FD /* AppDelegate.h */,
 				303E0D461CED93450053A0FD /* AppDelegate.m */,
+				EF4C7BAA1D0525C70087E96C /* LoadingView */,
 				EF3D8F9C1CEEBAA100AF117D /* LoginViewController */,
 				EF3D8F9F1CEEBAA100AF117D /* RegisterViewController */,
 				EF3D8F961CEEBAA100AF117D /* HomeViewController */,
@@ -425,6 +520,8 @@
 				30B7ABEE1D05777E00553861 /* User.m */,
 				30B7ABF01D0577BF00553861 /* UserInput.h */,
 				30B7ABF11D0577BF00553861 /* UserInput.m */,
+				EFD0F8F91CF40AF90084B877 /* AnswerItem */,
+				EF081D701CF1ED35008D9EBF /* WordItem */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -445,12 +542,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 303E0D6C1CED93450053A0FD /* Build configuration list for PBXNativeTarget "Elearning" */;
 			buildPhases = (
-				9F20D1852CB3AA28EC5BAABE /* 📦 Check Pods Manifest.lock */,
+				9F20D1852CB3AA28EC5BAABE /* [CP] Check Pods Manifest.lock */,
 				303E0D3B1CED93450053A0FD /* Sources */,
 				303E0D3C1CED93450053A0FD /* Frameworks */,
 				303E0D3D1CED93450053A0FD /* Resources */,
-				65673396299D9FC4642835C1 /* 📦 Embed Pods Frameworks */,
-				7460309F18626DE9B3A03813 /* 📦 Copy Pods Resources */,
+				65673396299D9FC4642835C1 /* [CP] Embed Pods Frameworks */,
+				7460309F18626DE9B3A03813 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -545,9 +642,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFD0F8CE1CF3E79B0084B877 /* next_2.png in Resources */,
 				303E0D521CED93450053A0FD /* LaunchScreen.storyboard in Resources */,
+				EFF050941CF822F4003A9CF5 /* grey.png in Resources */,
 				303E0D4F1CED93450053A0FD /* Assets.xcassets in Resources */,
 				30EBAC831CFBED730027A635 /* edit.png in Resources */,
+				EFD0F9051CF444B60084B877 /* false.png in Resources */,
+				EFD0F9061CF444B60084B877 /* hoicham.png in Resources */,
+				EFD0F8D01CF3E79B0084B877 /* pre_2.png in Resources */,
+				EFF050931CF822F4003A9CF5 /* green.png in Resources */,
+				EFD0F9071CF444B60084B877 /* true.png in Resources */,
 				303E0D4D1CED93450053A0FD /* Main.storyboard in Resources */,
 				3064ED131CF6E5AE0088709D /* checked.png in Resources */,
 				30EBAC821CFBED730027A635 /* avatar.png in Resources */,
@@ -577,14 +681,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		65673396299D9FC4642835C1 /* 📦 Embed Pods Frameworks */ = {
+		65673396299D9FC4642835C1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -592,14 +696,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Elearning/Pods-Elearning-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7460309F18626DE9B3A03813 /* 📦 Copy Pods Resources */ = {
+		7460309F18626DE9B3A03813 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -607,14 +711,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Elearning/Pods-Elearning-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9F20D1852CB3AA28EC5BAABE /* 📦 Check Pods Manifest.lock */ = {
+		9F20D1852CB3AA28EC5BAABE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -630,7 +734,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				303E0D471CED93450053A0FD /* AppDelegate.m in Sources */,
+				EF19B7EF1CF68E590085E921 /* GetDataWithDictionary.m in Sources */,
 				EF3D8FAC1CEEBAA100AF117D /* LessonViewController.m in Sources */,
+				EF19B7F61CF6D0620085E921 /* WordListTableViewCell.m in Sources */,
+				EFEC70CC1CEEFD6800D5BBEE /* WordItem.m in Sources */,
 				EF3D8FAD1CEEBAA100AF117D /* LoginViewController.m in Sources */,
 				EF3D8F951CEEBA5D00AF117D /* CategoriesViewController.m in Sources */,
 				30D0B86C1CFD331D0051F40A /* NSData+Base64.m in Sources */,
@@ -642,10 +749,14 @@
 				30FA00F21D090AC4006A5582 /* StoreData.m in Sources */,
 				EF3D8FAE1CEEBAA100AF117D /* RegisterViewController.m in Sources */,
 				307C500B1D065EA100182659 /* NetworkConnection.m in Sources */,
+				EFD0F8FC1CF40B1E0084B877 /* AnswerItem.m in Sources */,
 				303E0D441CED93450053A0FD /* main.m in Sources */,
+				EF4C7BAD1D0525C70087E96C /* LoadingView.m in Sources */,
 				EF3D8FAB1CEEBAA100AF117D /* HomeViewController.m in Sources */,
+				EF19B7EB1CF688D70085E921 /* WordListManager.m in Sources */,
 				EF3D8FAF1CEEBAA100AF117D /* ResultViewController.m in Sources */,
 				30D0B8691CFD32FC0051F40A /* NSData+CommonCrypto.m in Sources */,
+				EF081D6C1CF1EB07008D9EBF /* DBUtil.m in Sources */,
 				EF3D8FB11CEEBAA100AF117D /* WordsListViewController.m in Sources */,
 				30D0B86F1CFD333A0051F40A /* AESCrypt.m in Sources */,
 				30FA00EF1D090AA3006A5582 /* DataValidation.m in Sources */,
@@ -742,7 +853,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -780,7 +891,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
