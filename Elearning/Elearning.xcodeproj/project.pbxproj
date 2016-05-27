@@ -35,10 +35,11 @@
 		EF3D8FAC1CEEBAA100AF117D /* LessonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8F9B1CEEBAA100AF117D /* LessonViewController.m */; };
 		EF3D8FAD1CEEBAA100AF117D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8F9E1CEEBAA100AF117D /* LoginViewController.m */; };
 		EF3D8FAE1CEEBAA100AF117D /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8FA11CEEBAA100AF117D /* RegisterViewController.m */; };
-		EF3D8FAF1CEEBAA100AF117D /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8FA41CEEBAA100AF117D /* ResultViewController.m */; };
+		EF3D8FAF1CEEBAA100AF117D /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8FA41CEEBAA100AF117D /* ResultViewController.m */; settings = {ASSET_TAGS = (); }; };
 		EF3D8FB01CEEBAA100AF117D /* UpdateProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8FA71CEEBAA100AF117D /* UpdateProfileViewController.m */; };
 		EF3D8FB11CEEBAA100AF117D /* WordsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8FAA1CEEBAA100AF117D /* WordsListViewController.m */; };
-		EFF77A6E1CEDA6F300EAFAD5 /* SecondStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFF77A6D1CEDA6F300EAFAD5 /* SecondStoryboard.storyboard */; };
+		EFD0F9001CF441700084B877 /* ResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD0F8FE1CF441700084B877 /* ResultTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		EFF77A6E1CEDA6F300EAFAD5 /* SecondStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFF77A6D1CEDA6F300EAFAD5 /* SecondStoryboard.storyboard */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,8 @@
 		EF3D8FA71CEEBAA100AF117D /* UpdateProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateProfileViewController.m; sourceTree = "<group>"; };
 		EF3D8FA91CEEBAA100AF117D /* WordsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordsListViewController.h; sourceTree = "<group>"; };
 		EF3D8FAA1CEEBAA100AF117D /* WordsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordsListViewController.m; sourceTree = "<group>"; };
+		EFD0F8FD1CF441700084B877 /* ResultTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultTableViewCell.h; sourceTree = "<group>"; };
+		EFD0F8FE1CF441700084B877 /* ResultTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultTableViewCell.m; sourceTree = "<group>"; };
 		EFF77A6D1CEDA6F300EAFAD5 /* SecondStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SecondStoryboard.storyboard; path = Storyboards/SecondStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -171,6 +174,7 @@
 				EFF77A6A1CEDA5AB00EAFAD5 /* ViewControllers */,
 				EFF77A671CEDA2FB00EAFAD5 /* Storyboards */,
 				EFF77A6C1CEDA61500EAFAD5 /* Model */,
+				EF081D661CF1D91B008D9EBF /* DBController */,
 				EFF77A6B1CEDA5BE00EAFAD5 /* Libraries */,
 				EFF77A661CEDA2F200EAFAD5 /* Resources */,
 				EFF77A691CEDA5A100EAFAD5 /* Services */,
@@ -256,6 +260,13 @@
 			name = AES;
 			sourceTree = "<group>";
 		};
+		EF081D661CF1D91B008D9EBF /* DBController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DBController;
+			sourceTree = "<group>";
+		};
 		EF3D8F921CEEBA5D00AF117D /* CategoriesViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -311,6 +322,8 @@
 			children = (
 				EF3D8FA31CEEBAA100AF117D /* ResultViewController.h */,
 				EF3D8FA41CEEBAA100AF117D /* ResultViewController.m */,
+				EFD0F8FD1CF441700084B877 /* ResultTableViewCell.h */,
+				EFD0F8FE1CF441700084B877 /* ResultTableViewCell.m */,
 			);
 			name = ResultViewController;
 			path = ViewControllers/ResultViewController;
@@ -553,6 +566,7 @@
 				30D0B8661CFD32E00051F40A /* NSString+Base64.m in Sources */,
 				EF3D8FAE1CEEBAA100AF117D /* RegisterViewController.m in Sources */,
 				307C500B1D065EA100182659 /* NetworkConnection.m in Sources */,
+				EFD0F9001CF441700084B877 /* ResultTableViewCell.m in Sources */,
 				303E0D441CED93450053A0FD /* main.m in Sources */,
 				EF3D8FAB1CEEBAA100AF117D /* HomeViewController.m in Sources */,
 				EF3D8FAF1CEEBAA100AF117D /* ResultViewController.m in Sources */,
@@ -651,7 +665,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -689,7 +703,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

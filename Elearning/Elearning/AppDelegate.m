@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 //#import "LoginViewController.h"
 #import "WordsListViewController.h"
+#import "CategoriesViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,7 +20,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch
-    
     return YES;
 }
 
