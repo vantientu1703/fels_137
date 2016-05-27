@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ResultViewController : UIViewController
-
+@property (nonatomic, strong) NSMutableArray *arrWords;
+@property (nonatomic, strong) NSMutableArray *arrLearnedWords;
 @end

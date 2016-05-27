@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 //#import "LoginViewController.h"
 #import "WordsListViewController.h"
+#import "CategoriesViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,6 +20,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    UIStoryboard *st = [UIStoryboard storyboardWithName:@"SecondStoryboard" bundle:nil];
+    WordsListViewController *wlvc = [st instantiateViewControllerWithIdentifier:@"WordsListViewController"];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:wlvc];
+    self.window.rootViewController = nav;
+    [self.window makeKeyAndVisible];
     
     return YES;
 }

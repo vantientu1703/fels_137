@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "CategoryItem.h"
 @interface LessonViewController : UIViewController
+
+@property (nonatomic, strong) CategoryItem *categoryItem;
 
 @end
