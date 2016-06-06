@@ -14,15 +14,27 @@
 		303E0D521CED93450053A0FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 303E0D501CED93450053A0FD /* LaunchScreen.storyboard */; };
 		303E0D5D1CED93450053A0FD /* ElearningTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 303E0D5C1CED93450053A0FD /* ElearningTests.m */; };
 		303E0D681CED93450053A0FD /* ElearningUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 303E0D671CED93450053A0FD /* ElearningUITests.m */; };
-		EF3D8F951CEEBA5D00AF117D /* CategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8F941CEEBA5D00AF117D /* CategoriesViewController.m */; settings = {ASSET_TAGS = (); }; };
-		EF3D8FAB1CEEBAA100AF117D /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8F981CEEBAA100AF117D /* HomeViewController.m */; settings = {ASSET_TAGS = (); }; };
-		EF3D8FAC1CEEBAA100AF117D /* LessonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8F9B1CEEBAA100AF117D /* LessonViewController.m */; settings = {ASSET_TAGS = (); }; };
-		EF3D8FAD1CEEBAA100AF117D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8F9E1CEEBAA100AF117D /* LoginViewController.m */; settings = {ASSET_TAGS = (); }; };
-		EF3D8FAE1CEEBAA100AF117D /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8FA11CEEBAA100AF117D /* RegisterViewController.m */; settings = {ASSET_TAGS = (); }; };
-		EF3D8FAF1CEEBAA100AF117D /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8FA41CEEBAA100AF117D /* ResultViewController.m */; settings = {ASSET_TAGS = (); }; };
-		EF3D8FB01CEEBAA100AF117D /* UpdateProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8FA71CEEBAA100AF117D /* UpdateProfileViewController.m */; settings = {ASSET_TAGS = (); }; };
-		EF3D8FB11CEEBAA100AF117D /* WordsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8FAA1CEEBAA100AF117D /* WordsListViewController.m */; settings = {ASSET_TAGS = (); }; };
-		EFF77A6E1CEDA6F300EAFAD5 /* SecondStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFF77A6D1CEDA6F300EAFAD5 /* SecondStoryboard.storyboard */; settings = {ASSET_TAGS = (); }; };
+		3064ED131CF6E5AE0088709D /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 3064ED121CF6E5AE0088709D /* checked.png */; };
+		3064ED151CF6E5B60088709D /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 3064ED141CF6E5B60088709D /* unchecked.png */; };
+		309A3CEC1CF43AA4004F7F98 /* noavatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 309A3CEB1CF43AA4004F7F98 /* noavatar.png */; };
+		30D0B8661CFD32E00051F40A /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D0B8651CFD32E00051F40A /* NSString+Base64.m */; };
+		30D0B8691CFD32FC0051F40A /* NSData+CommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D0B8681CFD32FC0051F40A /* NSData+CommonCrypto.m */; };
+		30D0B86C1CFD331D0051F40A /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D0B86B1CFD331D0051F40A /* NSData+Base64.m */; };
+		30D0B86F1CFD333A0051F40A /* AESCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D0B86E1CFD333A0051F40A /* AESCrypt.m */; };
+		30EBAC821CFBED730027A635 /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 30EBAC7D1CFBED730027A635 /* avatar.png */; };
+		30EBAC831CFBED730027A635 /* edit.png in Resources */ = {isa = PBXBuildFile; fileRef = 30EBAC7E1CFBED730027A635 /* edit.png */; };
+		30EBAC841CFBED730027A635 /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = 30EBAC7F1CFBED730027A635 /* email.png */; };
+		30EBAC851CFBED730027A635 /* password.png in Resources */ = {isa = PBXBuildFile; fileRef = 30EBAC801CFBED730027A635 /* password.png */; };
+		30EBAC861CFBED730027A635 /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 30EBAC811CFBED730027A635 /* profile.png */; };
+		EF3D8F951CEEBA5D00AF117D /* CategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8F941CEEBA5D00AF117D /* CategoriesViewController.m */; };
+		EF3D8FAB1CEEBAA100AF117D /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8F981CEEBAA100AF117D /* HomeViewController.m */; };
+		EF3D8FAC1CEEBAA100AF117D /* LessonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8F9B1CEEBAA100AF117D /* LessonViewController.m */; };
+		EF3D8FAD1CEEBAA100AF117D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8F9E1CEEBAA100AF117D /* LoginViewController.m */; };
+		EF3D8FAE1CEEBAA100AF117D /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8FA11CEEBAA100AF117D /* RegisterViewController.m */; };
+		EF3D8FAF1CEEBAA100AF117D /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8FA41CEEBAA100AF117D /* ResultViewController.m */; };
+		EF3D8FB01CEEBAA100AF117D /* UpdateProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8FA71CEEBAA100AF117D /* UpdateProfileViewController.m */; };
+		EF3D8FB11CEEBAA100AF117D /* WordsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8FAA1CEEBAA100AF117D /* WordsListViewController.m */; };
+		EFF77A6E1CEDA6F300EAFAD5 /* SecondStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFF77A6D1CEDA6F300EAFAD5 /* SecondStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +69,22 @@
 		303E0D631CED93450053A0FD /* ElearningUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElearningUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		303E0D671CED93450053A0FD /* ElearningUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ElearningUITests.m; sourceTree = "<group>"; };
 		303E0D691CED93450053A0FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3064ED121CF6E5AE0088709D /* checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checked.png; path = Resources/Images/checked.png; sourceTree = "<group>"; };
+		3064ED141CF6E5B60088709D /* unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = unchecked.png; path = Resources/Images/unchecked.png; sourceTree = "<group>"; };
+		309A3CEB1CF43AA4004F7F98 /* noavatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = noavatar.png; path = Resources/Images/noavatar.png; sourceTree = "<group>"; };
+		30D0B8641CFD32E00051F40A /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Base64.h"; path = "AES/NSString+Base64.h"; sourceTree = "<group>"; };
+		30D0B8651CFD32E00051F40A /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Base64.m"; path = "AES/NSString+Base64.m"; sourceTree = "<group>"; };
+		30D0B8671CFD32FC0051F40A /* NSData+CommonCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+CommonCrypto.h"; path = "AES/NSData+CommonCrypto.h"; sourceTree = "<group>"; };
+		30D0B8681CFD32FC0051F40A /* NSData+CommonCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+CommonCrypto.m"; path = "AES/NSData+CommonCrypto.m"; sourceTree = "<group>"; };
+		30D0B86A1CFD331D0051F40A /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Base64.h"; path = "AES/NSData+Base64.h"; sourceTree = "<group>"; };
+		30D0B86B1CFD331D0051F40A /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+Base64.m"; path = "AES/NSData+Base64.m"; sourceTree = "<group>"; };
+		30D0B86D1CFD333A0051F40A /* AESCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AESCrypt.h; path = AES/AESCrypt.h; sourceTree = "<group>"; };
+		30D0B86E1CFD333A0051F40A /* AESCrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AESCrypt.m; path = AES/AESCrypt.m; sourceTree = "<group>"; };
+		30EBAC7D1CFBED730027A635 /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = avatar.png; path = Resources/Images/avatar.png; sourceTree = "<group>"; };
+		30EBAC7E1CFBED730027A635 /* edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = edit.png; path = Resources/Images/edit.png; sourceTree = "<group>"; };
+		30EBAC7F1CFBED730027A635 /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = email.png; path = Resources/Images/email.png; sourceTree = "<group>"; };
+		30EBAC801CFBED730027A635 /* password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = password.png; path = Resources/Images/password.png; sourceTree = "<group>"; };
+		30EBAC811CFBED730027A635 /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = profile.png; path = Resources/Images/profile.png; sourceTree = "<group>"; };
 		EF3D8F931CEEBA5D00AF117D /* CategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesViewController.h; sourceTree = "<group>"; };
 		EF3D8F941CEEBA5D00AF117D /* CategoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesViewController.m; sourceTree = "<group>"; };
 		EF3D8F971CEEBAA100AF117D /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
@@ -125,6 +153,9 @@
 		303E0D411CED93450053A0FD /* Elearning */ = {
 			isa = PBXGroup;
 			children = (
+				30D0B8631CFD32B70051F40A /* AES */,
+				3064ED051CF69A080088709D /* Utilities */,
+				3064ECFB1CF684B90088709D /* Network */,
 				EFF77A6A1CEDA5AB00EAFAD5 /* ViewControllers */,
 				EFF77A671CEDA2FB00EAFAD5 /* Storyboards */,
 				EFF77A6C1CEDA61500EAFAD5 /* Model */,
@@ -163,6 +194,50 @@
 				303E0D691CED93450053A0FD /* Info.plist */,
 			);
 			path = ElearningUITests;
+			sourceTree = "<group>";
+		};
+		3064ECFB1CF684B90088709D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		3064ED051CF69A080088709D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		309A3CE61CF43609004F7F98 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				30EBAC7D1CFBED730027A635 /* avatar.png */,
+				30EBAC7E1CFBED730027A635 /* edit.png */,
+				30EBAC7F1CFBED730027A635 /* email.png */,
+				30EBAC801CFBED730027A635 /* password.png */,
+				30EBAC811CFBED730027A635 /* profile.png */,
+				3064ED141CF6E5B60088709D /* unchecked.png */,
+				3064ED121CF6E5AE0088709D /* checked.png */,
+				309A3CEB1CF43AA4004F7F98 /* noavatar.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		30D0B8631CFD32B70051F40A /* AES */ = {
+			isa = PBXGroup;
+			children = (
+				30D0B8641CFD32E00051F40A /* NSString+Base64.h */,
+				30D0B8651CFD32E00051F40A /* NSString+Base64.m */,
+				30D0B8671CFD32FC0051F40A /* NSData+CommonCrypto.h */,
+				30D0B8681CFD32FC0051F40A /* NSData+CommonCrypto.m */,
+				30D0B86A1CFD331D0051F40A /* NSData+Base64.h */,
+				30D0B86B1CFD331D0051F40A /* NSData+Base64.m */,
+				30D0B86D1CFD333A0051F40A /* AESCrypt.h */,
+				30D0B86E1CFD333A0051F40A /* AESCrypt.m */,
+			);
+			name = AES;
 			sourceTree = "<group>";
 		};
 		EF3D8F921CEEBA5D00AF117D /* CategoriesViewController */ = {
@@ -248,6 +323,7 @@
 		EFF77A661CEDA2F200EAFAD5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				309A3CE61CF43609004F7F98 /* Images */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -373,6 +449,7 @@
 				TargetAttributes = {
 					303E0D3E1CED93450053A0FD = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = R8ZB26EDKD;
 					};
 					303E0D571CED93450053A0FD = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -411,8 +488,16 @@
 			files = (
 				303E0D521CED93450053A0FD /* LaunchScreen.storyboard in Resources */,
 				303E0D4F1CED93450053A0FD /* Assets.xcassets in Resources */,
+				30EBAC831CFBED730027A635 /* edit.png in Resources */,
 				303E0D4D1CED93450053A0FD /* Main.storyboard in Resources */,
+				3064ED131CF6E5AE0088709D /* checked.png in Resources */,
+				30EBAC821CFBED730027A635 /* avatar.png in Resources */,
+				309A3CEC1CF43AA4004F7F98 /* noavatar.png in Resources */,
+				30EBAC861CFBED730027A635 /* profile.png in Resources */,
+				30EBAC851CFBED730027A635 /* password.png in Resources */,
 				EFF77A6E1CEDA6F300EAFAD5 /* SecondStoryboard.storyboard in Resources */,
+				30EBAC841CFBED730027A635 /* email.png in Resources */,
+				3064ED151CF6E5B60088709D /* unchecked.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,11 +526,15 @@
 				EF3D8FAC1CEEBAA100AF117D /* LessonViewController.m in Sources */,
 				EF3D8FAD1CEEBAA100AF117D /* LoginViewController.m in Sources */,
 				EF3D8F951CEEBA5D00AF117D /* CategoriesViewController.m in Sources */,
+				30D0B86C1CFD331D0051F40A /* NSData+Base64.m in Sources */,
+				30D0B8661CFD32E00051F40A /* NSString+Base64.m in Sources */,
 				EF3D8FAE1CEEBAA100AF117D /* RegisterViewController.m in Sources */,
 				303E0D441CED93450053A0FD /* main.m in Sources */,
 				EF3D8FAB1CEEBAA100AF117D /* HomeViewController.m in Sources */,
 				EF3D8FAF1CEEBAA100AF117D /* ResultViewController.m in Sources */,
+				30D0B8691CFD32FC0051F40A /* NSData+CommonCrypto.m in Sources */,
 				EF3D8FB11CEEBAA100AF117D /* WordsListViewController.m in Sources */,
+				30D0B86F1CFD333A0051F40A /* AESCrypt.m in Sources */,
 				EF3D8FB01CEEBAA100AF117D /* UpdateProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -587,11 +676,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Elearning/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.framgia.Elearning;
+				PRODUCT_BUNDLE_IDENTIFIER = com.framgia.ElearningMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -599,11 +691,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Elearning/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.framgia.Elearning;
+				PRODUCT_BUNDLE_IDENTIFIER = com.framgia.ElearningMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
