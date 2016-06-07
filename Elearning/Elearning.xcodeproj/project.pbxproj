@@ -17,6 +17,8 @@
 		3064ED131CF6E5AE0088709D /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 3064ED121CF6E5AE0088709D /* checked.png */; };
 		3064ED151CF6E5B60088709D /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 3064ED141CF6E5B60088709D /* unchecked.png */; };
 		309A3CEC1CF43AA4004F7F98 /* noavatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 309A3CEB1CF43AA4004F7F98 /* noavatar.png */; };
+		30B7ABEF1D05777E00553861 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B7ABEE1D05777E00553861 /* User.m */; };
+		30B7ABF21D0577BF00553861 /* UserInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B7ABF11D0577BF00553861 /* UserInput.m */; };
 		30D0B8661CFD32E00051F40A /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D0B8651CFD32E00051F40A /* NSString+Base64.m */; };
 		30D0B8691CFD32FC0051F40A /* NSData+CommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D0B8681CFD32FC0051F40A /* NSData+CommonCrypto.m */; };
 		30D0B86C1CFD331D0051F40A /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D0B86B1CFD331D0051F40A /* NSData+Base64.m */; };
@@ -72,6 +74,10 @@
 		3064ED121CF6E5AE0088709D /* checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checked.png; path = Resources/Images/checked.png; sourceTree = "<group>"; };
 		3064ED141CF6E5B60088709D /* unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = unchecked.png; path = Resources/Images/unchecked.png; sourceTree = "<group>"; };
 		309A3CEB1CF43AA4004F7F98 /* noavatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = noavatar.png; path = Resources/Images/noavatar.png; sourceTree = "<group>"; };
+		30B7ABED1D05777E00553861 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Model/User.h; sourceTree = "<group>"; };
+		30B7ABEE1D05777E00553861 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Model/User.m; sourceTree = "<group>"; };
+		30B7ABF01D0577BF00553861 /* UserInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserInput.h; path = Model/UserInput.h; sourceTree = "<group>"; };
+		30B7ABF11D0577BF00553861 /* UserInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserInput.m; path = Model/UserInput.m; sourceTree = "<group>"; };
 		30D0B8641CFD32E00051F40A /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Base64.h"; path = "AES/NSString+Base64.h"; sourceTree = "<group>"; };
 		30D0B8651CFD32E00051F40A /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Base64.m"; path = "AES/NSString+Base64.m"; sourceTree = "<group>"; };
 		30D0B8671CFD32FC0051F40A /* NSData+CommonCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+CommonCrypto.h"; path = "AES/NSData+CommonCrypto.h"; sourceTree = "<group>"; };
@@ -378,6 +384,10 @@
 		EFF77A6C1CEDA61500EAFAD5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				30B7ABED1D05777E00553861 /* User.h */,
+				30B7ABEE1D05777E00553861 /* User.m */,
+				30B7ABF01D0577BF00553861 /* UserInput.h */,
+				30B7ABF11D0577BF00553861 /* UserInput.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -527,6 +537,8 @@
 				EF3D8FAD1CEEBAA100AF117D /* LoginViewController.m in Sources */,
 				EF3D8F951CEEBA5D00AF117D /* CategoriesViewController.m in Sources */,
 				30D0B86C1CFD331D0051F40A /* NSData+Base64.m in Sources */,
+				30B7ABF21D0577BF00553861 /* UserInput.m in Sources */,
+				30B7ABEF1D05777E00553861 /* User.m in Sources */,
 				30D0B8661CFD32E00051F40A /* NSString+Base64.m in Sources */,
 				EF3D8FAE1CEEBAA100AF117D /* RegisterViewController.m in Sources */,
 				303E0D441CED93450053A0FD /* main.m in Sources */,
