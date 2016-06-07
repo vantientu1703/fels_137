@@ -51,3 +51,7 @@ Carthage/Build
 
 fastlane/report.xml
 fastlane/screenshots
+/Elearning/Elearning.xcworkspace
+/Elearning/Podfile
+/Elearning/Podfile.lock
+/Elearning/Pods/*
