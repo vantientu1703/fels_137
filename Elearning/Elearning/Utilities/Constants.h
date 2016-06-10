@@ -10,6 +10,12 @@
 
 @interface Constants : NSObject
 
+#pragma mark - API
+extern NSString *const URL_LOGIN;
+extern NSString *const SESSION_EMAIL;
+extern NSString *const SESSION_PASSWORD;
+extern NSString *const SESSION_REMEMBERME;
+
 #pragma mark - Regex
 extern NSString *const EMAIL_FILTER_REGEX;
 
@@ -22,6 +28,7 @@ extern NSString *const ERROR_NAME_REQUIRED;
 extern NSString *const ERROR_MAX_LENGTH_EMAIL;
 extern NSString *const ERROR_MIN_LENGTH_PASSWORD;
 extern NSString *const ERROR_MAX_LENGTH_NAME;
+extern NSString *const ERROR_LOST_CONNECTION;
 
 #pragma mark - Data Validation Constants
 extern NSInteger const MAX_LENGTH_USER_NAME;
