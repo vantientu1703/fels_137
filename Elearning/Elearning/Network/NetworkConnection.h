@@ -22,7 +22,7 @@ typedef NS_ENUM(NSInteger, METHODS) {
 + (NSString *)formatMethodTypeToString:(METHODS)method;
 
 + (void)responseWithUrl:(NSString *)url
-                 method:(NSString *)method
+                 method:(METHODS *)method
                  params:(NSString *)params
           resultRequest:(ResultRequest)complete;
 

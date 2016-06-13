@@ -14,6 +14,7 @@
 		303E0D521CED93450053A0FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 303E0D501CED93450053A0FD /* LaunchScreen.storyboard */; };
 		303E0D5D1CED93450053A0FD /* ElearningTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 303E0D5C1CED93450053A0FD /* ElearningTests.m */; };
 		303E0D681CED93450053A0FD /* ElearningUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 303E0D671CED93450053A0FD /* ElearningUITests.m */; };
+		305382E71D0A87C300933D8D /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 305382E61D0A87C300933D8D /* LoginManager.m */; };
 		3064ED131CF6E5AE0088709D /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 3064ED121CF6E5AE0088709D /* checked.png */; };
 		3064ED151CF6E5B60088709D /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 3064ED141CF6E5B60088709D /* unchecked.png */; };
 		307C50081D065E8800182659 /* ParseJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 307C50071D065E8800182659 /* ParseJson.m */; };
@@ -78,6 +79,8 @@
 		303E0D631CED93450053A0FD /* ElearningUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElearningUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		303E0D671CED93450053A0FD /* ElearningUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ElearningUITests.m; sourceTree = "<group>"; };
 		303E0D691CED93450053A0FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		305382E51D0A87C300933D8D /* LoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginManager.h; sourceTree = "<group>"; };
+		305382E61D0A87C300933D8D /* LoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginManager.m; sourceTree = "<group>"; };
 		3064ED121CF6E5AE0088709D /* checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checked.png; path = Resources/Images/checked.png; sourceTree = "<group>"; };
 		3064ED141CF6E5B60088709D /* unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = unchecked.png; path = Resources/Images/unchecked.png; sourceTree = "<group>"; };
 		307C50061D065E8800182659 /* ParseJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParseJson.h; path = Network/ParseJson.h; sourceTree = "<group>"; };
@@ -312,6 +315,8 @@
 			children = (
 				EF3D8F9D1CEEBAA100AF117D /* LoginViewController.h */,
 				EF3D8F9E1CEEBAA100AF117D /* LoginViewController.m */,
+				305382E51D0A87C300933D8D /* LoginManager.h */,
+				305382E61D0A87C300933D8D /* LoginManager.m */,
 			);
 			name = LoginViewController;
 			path = ViewControllers/LoginViewController;
@@ -645,6 +650,7 @@
 				30D0B86F1CFD333A0051F40A /* AESCrypt.m in Sources */,
 				30FA00EF1D090AA3006A5582 /* DataValidation.m in Sources */,
 				EF3D8FB01CEEBAA100AF117D /* UpdateProfileViewController.m in Sources */,
+				305382E71D0A87C300933D8D /* LoginManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
