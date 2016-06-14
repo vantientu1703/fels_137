@@ -11,8 +11,10 @@
 #import "StoreData.h"
 #import "UserInput.h"
 #import "HomeViewController.h"
+#import "LoadingView.h"
 
 @interface LoginViewController ()
+@property (strong, nonatomic) LoadingView *loadingView;
 @property (weak, nonatomic) IBOutlet UITextField *txtEmail;
 @property (weak, nonatomic) IBOutlet UITextField *txtPassword;
 @property (weak, nonatomic) IBOutlet UILabel *lblAlert;
@@ -23,7 +25,6 @@
 
 @implementation LoginViewController
 
-UIActivityIndicatorView *_spinnerLogin;
 BOOL _rememberMeChecked;
 
 - (void)viewDidLoad {
@@ -32,12 +33,6 @@ BOOL _rememberMeChecked;
     self.title = @"Login";
     self.lblAlert.text = @"";
     [self checkRememberMe];
-    // loading
-    _spinnerLogin = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-    _spinnerLogin.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
-    CGSize screenSize = [UIScreen mainScreen].bounds.size;
-    [_spinnerLogin setCenter:CGPointMake(screenSize.width/2.0, screenSize.height/2.0)];
-    [self.view addSubview:_spinnerLogin];
 }
 
 - (IBAction)TurnOffKeyboard:(id)sender {
@@ -50,7 +45,8 @@ BOOL _rememberMeChecked;
 }
 
 - (IBAction)btnLogin:(id)sender {
-    [_spinnerLogin startAnimating];
+    self.loadingView = [[LoadingView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    [self.view addSubview:self.loadingView];
     self.lblAlert.text = @"";
     [self saveRememberMe];
     LoginManager *loginManager = [[LoginManager alloc] init];
@@ -106,7 +102,8 @@ BOOL _rememberMeChecked;
 
 #pragma mark - LoginManagerDelegate
 - (void)didResponseWithMessage:(NSString *)message withError:(NSError *)error {
-    [_spinnerLogin stopAnimating];
+    [self.loadingView removeFromSuperview];
+    self.loadingView = nil;
     if ([message isEqualToString:@""] && !error) {
         [StoreData setLogin:YES];
         [self goHome];
@@ -121,4 +118,5 @@ BOOL _rememberMeChecked;
     UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"HomeViewController"];
     self.navigationController.viewControllers = @[vc];
 }
+
 @end

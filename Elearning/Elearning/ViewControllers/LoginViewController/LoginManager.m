@@ -24,8 +24,9 @@
     // check local ok, send request login
     if (!errorMessage.length) {
         NSInteger iRememberMe = @(rememberMe).integerValue;
+        NSString *urlLogin = [NSString stringWithFormat:@"%@%@", BASE_URL, LOG_IN_REQUEST];
         NSString *paramLogin = [NSString stringWithFormat:@"%@%@&%@%@&%@%d", SESSION_EMAIL, email, SESSION_PASSWORD, password, SESSION_REMEMBERME, (int)iRememberMe];
-        [NetworkConnection responseWithUrl:URL_LOGIN method:POST params:paramLogin resultRequest:^(NSDictionary *dic, NSError *error) {
+        [NetworkConnection responseWithUrl:urlLogin method:POST params:paramLogin resultRequest:^(NSDictionary *dic, NSError *error) {
             NSString *message = ERROR_LOST_CONNECTION;
             if (!error && dic) {
                 message = dic[@"message"];

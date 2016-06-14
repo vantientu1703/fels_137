@@ -8,7 +8,7 @@
         <!--Navigation Controller-->
         <scene sceneID="9zh-Bj-rHv">
             <objects>
-                <navigationController storyboardIdentifier="Login" id="jwn-4E-sg9" sceneMemberID="viewController">
+                <navigationController id="jwn-4E-sg9" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="DdS-a0-NDo"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="E9M-gj-wmT">
@@ -26,7 +26,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -57,6 +57,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="rLw-O4-1gt"/>
+                                </connections>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="password.png" translatesAutoresizingMaskIntoConstraints="NO" id="hfh-cq-xBL">
                                 <rect key="frame" x="30" y="181" width="30" height="29"/>
@@ -72,6 +75,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="tQB-4b-gbP"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* Username or password is incorrect" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gS9-I9-fK6">
                                 <rect key="frame" x="10" y="268" width="300" height="32"/>
@@ -253,21 +259,33 @@
                                 <rect key="frame" x="20" y="114" width="264" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="tyA-Jp-b1b" id="MIt-4Z-uY8"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="54d-gz-x3t">
                                 <rect key="frame" x="20" y="197" width="264" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="tyA-Jp-b1b" id="1XR-D0-YOL"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dUv-Vh-rl2">
                                 <rect key="frame" x="20" y="289" width="264" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="tyA-Jp-b1b" id="PLg-V5-bia"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IiM-dz-OOs">
                                 <rect key="frame" x="19" y="381" width="264" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="tyA-Jp-b1b" id="h8D-tv-fx9"/>
+                                </connections>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="email.png" translatesAutoresizingMaskIntoConstraints="NO" id="x2q-9k-dqD">
                                 <rect key="frame" x="20" y="84" width="26" height="22"/>
@@ -383,23 +401,30 @@
                                 <rect key="frame" x="16" y="7" width="71" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="btnCancel:" destination="tyA-Jp-b1b" eventType="touchUpInside" id="Iyb-Gf-8fQ"/>
+                                </connections>
                             </button>
-                            <connections>
-                                <action selector="btnCancel:" destination="tyA-Jp-b1b" id="i4R-xO-LBU"/>
-                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="Zdl-Jy-SSI">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="p8n-OB-7wg">
                                 <rect key="frame" x="233" y="7" width="71" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="btnDone:" destination="tyA-Jp-b1b" eventType="touchUpInside" id="58y-Ah-7Gk"/>
+                                </connections>
                             </button>
-                            <connections>
-                                <action selector="btnDone:" destination="tyA-Jp-b1b" id="HKv-sW-LPM"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="lblAlert" destination="Lxm-0R-DDK" id="jSN-6S-h1Y"/>
+                        <outlet property="txtEmail" destination="Tw0-YG-A9L" id="p39-My-uUP"/>
+                        <outlet property="txtFullName" destination="IiM-dz-OOs" id="n99-3E-yiR"/>
+                        <outlet property="txtPassword" destination="54d-gz-x3t" id="QAK-ja-qVh"/>
+                        <outlet property="txtRetypePassword" destination="dUv-Vh-rl2" id="uke-c3-nFy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rqa-aE-14L" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="gCk-dc-SXC">
