@@ -17,6 +17,7 @@ NSString *const LOG_OUT_REQUEST = @"/logout.json";;
 NSString *const SIGN_UP_REQUEST = @"/users.json";
 NSString *const GET_CATEGORIES_REQUEST = @"/categories.json";
 NSString *const LESSONS_REQUEST = @"/lessons.json";
+NSString *const USER_REQUEST = @"/users/";
 NSString *const REQUEST_EXTENSION = @".json";
 NSString *const SESSION_EMAIL = @"session[email]=";
 NSString *const SESSION_PASSWORD = @"session[password]=";
@@ -26,11 +27,21 @@ NSString *const USER_NAME = @"user[name]=";
 NSString *const USER_EMAIL = @"user[email]=";
 NSString *const USER_PASSWORD = @"user[password]=";
 NSString *const USER_PASSWORD_CONFIRMATION = @"user[password_confirmation]=";
+NSString *const USER_AVATAR = @"user[avatar]=";
+
+#pragma mark - Avatar
+NSString *const ERROR_CAMERA_TITLE = @"Oops!!!";
+NSString *const ERROR_CAMERA_MESSAGE = @"Camera Not Found";
+NSString *const AVATAR_ALERT_TITLE = @"Avatar";
+NSString *const AVATAR_ALERT_MESSAGE = @"Select a photo";
+NSString *const CANCEL_MESSAGE = @"Cancel";
+NSString *const CHOSSE_GALLERY_MESSAGE = @"Choose from Gallery";
+NSString *const TAKE_PHOTO_MESSAGE = @"Take Photo";
 
 #pragma mark - Regex
 NSString *const EMAIL_FILTER_REGEX = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
 
-#pragma mark - Error Strings
+#pragma mark - Strings
 NSString *const ERROR_EMAIL_REQUIRED = @"Email address required";
 NSString *const ERROR_EMAIL_INVALID = @"Email address is invalid";
 NSString *const ERROR_PASSWORD_REQUIRED = @"Password required";
@@ -40,6 +51,9 @@ NSString *const ERROR_MAX_LENGTH_EMAIL = @"Email can not be longer than ";
 NSString *const ERROR_MIN_LENGTH_PASSWORD = @"Password should be at least ";
 NSString *const ERROR_MAX_LENGTH_NAME = @"Name can not be longer than ";
 NSString *const ERROR_LOST_CONNECTION = @"Lost connection";
+NSString *const ERROR_UPDATE_PROFILE = @"Error update";
+NSString *const UPDATE_PROFILE_SUCCESS = @"Update success";
+
 
 #pragma mark - Data Validation Constants
 NSInteger const MAX_LENGTH_USER_NAME = 50;

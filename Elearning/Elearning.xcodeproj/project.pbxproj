@@ -21,6 +21,7 @@
 		307C500B1D065EA100182659 /* NetworkConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 307C500A1D065EA100182659 /* NetworkConnection.m */; };
 		30816E201D0A518D006BC291 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 30816E1F1D0A518D006BC291 /* Constants.m */; };
 		309A3CEC1CF43AA4004F7F98 /* noavatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 309A3CEB1CF43AA4004F7F98 /* noavatar.png */; };
+		30AE525C1D0FE07D00835FFD /* UpdateProfileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AE525B1D0FE07D00835FFD /* UpdateProfileManager.m */; };
 		30B7ABEF1D05777E00553861 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B7ABEE1D05777E00553861 /* User.m */; };
 		30B7ABF21D0577BF00553861 /* UserInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B7ABF11D0577BF00553861 /* UserInput.m */; };
 		30D0B8661CFD32E00051F40A /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D0B8651CFD32E00051F40A /* NSString+Base64.m */; };
@@ -105,6 +106,8 @@
 		30816E1E1D0A518D006BC291 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Utilities/Constants.h; sourceTree = "<group>"; };
 		30816E1F1D0A518D006BC291 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = Utilities/Constants.m; sourceTree = "<group>"; };
 		309A3CEB1CF43AA4004F7F98 /* noavatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = noavatar.png; path = Resources/Images/noavatar.png; sourceTree = "<group>"; };
+		30AE525A1D0FE07D00835FFD /* UpdateProfileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateProfileManager.h; sourceTree = "<group>"; };
+		30AE525B1D0FE07D00835FFD /* UpdateProfileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateProfileManager.m; sourceTree = "<group>"; };
 		30B7ABED1D05777E00553861 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Model/User.h; sourceTree = "<group>"; };
 		30B7ABEE1D05777E00553861 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Model/User.m; sourceTree = "<group>"; };
 		30B7ABF01D0577BF00553861 /* UserInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserInput.h; path = Model/UserInput.h; sourceTree = "<group>"; };
@@ -418,6 +421,8 @@
 			children = (
 				EF3D8FA61CEEBAA100AF117D /* UpdateProfileViewController.h */,
 				EF3D8FA71CEEBAA100AF117D /* UpdateProfileViewController.m */,
+				30AE525A1D0FE07D00835FFD /* UpdateProfileManager.h */,
+				30AE525B1D0FE07D00835FFD /* UpdateProfileManager.m */,
 			);
 			name = UpdateProfileViewController;
 			path = ViewControllers/UpdateProfileViewController;
@@ -810,6 +815,7 @@
 				EF19B7EB1CF688D70085E921 /* WordListManager.m in Sources */,
 				EF3D8FAF1CEEBAA100AF117D /* ResultViewController.m in Sources */,
 				30D0B8691CFD32FC0051F40A /* NSData+CommonCrypto.m in Sources */,
+				30AE525C1D0FE07D00835FFD /* UpdateProfileManager.m in Sources */,
 				EF081D6C1CF1EB07008D9EBF /* DBUtil.m in Sources */,
 				EF3D8FB11CEEBAA100AF117D /* WordsListViewController.m in Sources */,
 				30D0B86F1CFD333A0051F40A /* AESCrypt.m in Sources */,
