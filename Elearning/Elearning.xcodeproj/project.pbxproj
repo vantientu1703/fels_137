@@ -32,13 +32,14 @@
 		30EBAC841CFBED730027A635 /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = 30EBAC7F1CFBED730027A635 /* email.png */; };
 		30EBAC851CFBED730027A635 /* password.png in Resources */ = {isa = PBXBuildFile; fileRef = 30EBAC801CFBED730027A635 /* password.png */; };
 		30EBAC861CFBED730027A635 /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 30EBAC811CFBED730027A635 /* profile.png */; };
+		30EFC2141D0FBC9400569DC4 /* RegisterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 30EFC2131D0FBC9400569DC4 /* RegisterManager.m */; };
 		30FA00EF1D090AA3006A5582 /* DataValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FA00EE1D090AA3006A5582 /* DataValidation.m */; };
 		30FA00F21D090AC4006A5582 /* StoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FA00F11D090AC4006A5582 /* StoreData.m */; };
 		CC9654C464C833B8DCFF6632 /* libPods-Elearning.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9BAE788895C61BBFDE065F /* libPods-Elearning.a */; };
-		EF081D6C1CF1EB07008D9EBF /* DBUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EF081D6B1CF1EB07008D9EBF /* DBUtil.m */; settings = {ASSET_TAGS = (); }; };
-		EF19B7EB1CF688D70085E921 /* WordListManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF19B7EA1CF688D70085E921 /* WordListManager.m */; settings = {ASSET_TAGS = (); }; };
-		EF19B7EF1CF68E590085E921 /* GetDataWithDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = EF19B7EE1CF68E590085E921 /* GetDataWithDictionary.m */; settings = {ASSET_TAGS = (); }; };
-		EF19B7F61CF6D0620085E921 /* WordListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF19B7F41CF6D0620085E921 /* WordListTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		EF081D6C1CF1EB07008D9EBF /* DBUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EF081D6B1CF1EB07008D9EBF /* DBUtil.m */; };
+		EF19B7EB1CF688D70085E921 /* WordListManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF19B7EA1CF688D70085E921 /* WordListManager.m */; };
+		EF19B7EF1CF68E590085E921 /* GetDataWithDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = EF19B7EE1CF68E590085E921 /* GetDataWithDictionary.m */; };
+		EF19B7F61CF6D0620085E921 /* WordListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF19B7F41CF6D0620085E921 /* WordListTableViewCell.m */; };
 		EF3D8F951CEEBA5D00AF117D /* CategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8F941CEEBA5D00AF117D /* CategoriesViewController.m */; };
 		EF3D8FAB1CEEBAA100AF117D /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8F981CEEBAA100AF117D /* HomeViewController.m */; };
 		EF3D8FAC1CEEBAA100AF117D /* LessonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8F9B1CEEBAA100AF117D /* LessonViewController.m */; };
@@ -46,18 +47,18 @@
 		EF3D8FAE1CEEBAA100AF117D /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8FA11CEEBAA100AF117D /* RegisterViewController.m */; };
 		EF3D8FAF1CEEBAA100AF117D /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8FA41CEEBAA100AF117D /* ResultViewController.m */; };
 		EF3D8FB01CEEBAA100AF117D /* UpdateProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8FA71CEEBAA100AF117D /* UpdateProfileViewController.m */; };
-		EF3D8FB11CEEBAA100AF117D /* WordsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8FAA1CEEBAA100AF117D /* WordsListViewController.m */; settings = {ASSET_TAGS = (); }; };
-		EF4C7BAD1D0525C70087E96C /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4C7BAC1D0525C70087E96C /* LoadingView.m */; settings = {ASSET_TAGS = (); }; };
-		EFD0F8CE1CF3E79B0084B877 /* next_2.png in Resources */ = {isa = PBXBuildFile; fileRef = EFD0F8CA1CF3E79B0084B877 /* next_2.png */; settings = {ASSET_TAGS = (); }; };
-		EFD0F8D01CF3E79B0084B877 /* pre_2.png in Resources */ = {isa = PBXBuildFile; fileRef = EFD0F8CC1CF3E79B0084B877 /* pre_2.png */; settings = {ASSET_TAGS = (); }; };
-		EFD0F8FC1CF40B1E0084B877 /* AnswerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD0F8FB1CF40B1E0084B877 /* AnswerItem.m */; settings = {ASSET_TAGS = (); }; };
-		EFD0F9051CF444B60084B877 /* false.png in Resources */ = {isa = PBXBuildFile; fileRef = EFD0F9021CF444B60084B877 /* false.png */; settings = {ASSET_TAGS = (); }; };
-		EFD0F9061CF444B60084B877 /* hoicham.png in Resources */ = {isa = PBXBuildFile; fileRef = EFD0F9031CF444B60084B877 /* hoicham.png */; settings = {ASSET_TAGS = (); }; };
-		EFD0F9071CF444B60084B877 /* true.png in Resources */ = {isa = PBXBuildFile; fileRef = EFD0F9041CF444B60084B877 /* true.png */; settings = {ASSET_TAGS = (); }; };
-		EFEC70CC1CEEFD6800D5BBEE /* WordItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEC70CB1CEEFD6800D5BBEE /* WordItem.m */; settings = {ASSET_TAGS = (); }; };
-		EFF050931CF822F4003A9CF5 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = EFF050911CF822F4003A9CF5 /* green.png */; settings = {ASSET_TAGS = (); }; };
-		EFF050941CF822F4003A9CF5 /* grey.png in Resources */ = {isa = PBXBuildFile; fileRef = EFF050921CF822F4003A9CF5 /* grey.png */; settings = {ASSET_TAGS = (); }; };
-		EFF77A6E1CEDA6F300EAFAD5 /* SecondStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFF77A6D1CEDA6F300EAFAD5 /* SecondStoryboard.storyboard */; settings = {ASSET_TAGS = (); }; };
+		EF3D8FB11CEEBAA100AF117D /* WordsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8FAA1CEEBAA100AF117D /* WordsListViewController.m */; };
+		EF4C7BAD1D0525C70087E96C /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4C7BAC1D0525C70087E96C /* LoadingView.m */; };
+		EFD0F8CE1CF3E79B0084B877 /* next_2.png in Resources */ = {isa = PBXBuildFile; fileRef = EFD0F8CA1CF3E79B0084B877 /* next_2.png */; };
+		EFD0F8D01CF3E79B0084B877 /* pre_2.png in Resources */ = {isa = PBXBuildFile; fileRef = EFD0F8CC1CF3E79B0084B877 /* pre_2.png */; };
+		EFD0F8FC1CF40B1E0084B877 /* AnswerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD0F8FB1CF40B1E0084B877 /* AnswerItem.m */; };
+		EFD0F9051CF444B60084B877 /* false.png in Resources */ = {isa = PBXBuildFile; fileRef = EFD0F9021CF444B60084B877 /* false.png */; };
+		EFD0F9061CF444B60084B877 /* hoicham.png in Resources */ = {isa = PBXBuildFile; fileRef = EFD0F9031CF444B60084B877 /* hoicham.png */; };
+		EFD0F9071CF444B60084B877 /* true.png in Resources */ = {isa = PBXBuildFile; fileRef = EFD0F9041CF444B60084B877 /* true.png */; };
+		EFEC70CC1CEEFD6800D5BBEE /* WordItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEC70CB1CEEFD6800D5BBEE /* WordItem.m */; };
+		EFF050931CF822F4003A9CF5 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = EFF050911CF822F4003A9CF5 /* green.png */; };
+		EFF050941CF822F4003A9CF5 /* grey.png in Resources */ = {isa = PBXBuildFile; fileRef = EFF050921CF822F4003A9CF5 /* grey.png */; };
+		EFF77A6E1CEDA6F300EAFAD5 /* SecondStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFF77A6D1CEDA6F300EAFAD5 /* SecondStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +122,8 @@
 		30EBAC7F1CFBED730027A635 /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = email.png; path = Resources/Images/email.png; sourceTree = "<group>"; };
 		30EBAC801CFBED730027A635 /* password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = password.png; path = Resources/Images/password.png; sourceTree = "<group>"; };
 		30EBAC811CFBED730027A635 /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = profile.png; path = Resources/Images/profile.png; sourceTree = "<group>"; };
+		30EFC2121D0FBC9400569DC4 /* RegisterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterManager.h; sourceTree = "<group>"; };
+		30EFC2131D0FBC9400569DC4 /* RegisterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterManager.m; sourceTree = "<group>"; };
 		30FA00ED1D090AA3006A5582 /* DataValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataValidation.h; path = Utilities/DataValidation.h; sourceTree = "<group>"; };
 		30FA00EE1D090AA3006A5582 /* DataValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataValidation.m; path = Utilities/DataValidation.m; sourceTree = "<group>"; };
 		30FA00F01D090AC4006A5582 /* StoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StoreData.h; path = Utilities/StoreData.h; sourceTree = "<group>"; };
@@ -393,6 +396,8 @@
 			children = (
 				EF3D8FA01CEEBAA100AF117D /* RegisterViewController.h */,
 				EF3D8FA11CEEBAA100AF117D /* RegisterViewController.m */,
+				30EFC2121D0FBC9400569DC4 /* RegisterManager.h */,
+				30EFC2131D0FBC9400569DC4 /* RegisterManager.m */,
 			);
 			name = RegisterViewController;
 			path = ViewControllers/RegisterViewController;
@@ -542,12 +547,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 303E0D6C1CED93450053A0FD /* Build configuration list for PBXNativeTarget "Elearning" */;
 			buildPhases = (
+				D182FB9C19B87E223363E445 /* 📦 Check Pods Manifest.lock */,
 				9F20D1852CB3AA28EC5BAABE /* [CP] Check Pods Manifest.lock */,
 				303E0D3B1CED93450053A0FD /* Sources */,
 				303E0D3C1CED93450053A0FD /* Frameworks */,
 				303E0D3D1CED93450053A0FD /* Resources */,
 				65673396299D9FC4642835C1 /* [CP] Embed Pods Frameworks */,
 				7460309F18626DE9B3A03813 /* [CP] Copy Pods Resources */,
+				320C6914733F87CF027DC42B /* 📦 Embed Pods Frameworks */,
+				DA6D50DBF1A16BCA96303A8B /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -681,6 +689,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		320C6914733F87CF027DC42B /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Elearning/Pods-Elearning-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		65673396299D9FC4642835C1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -726,6 +749,36 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		D182FB9C19B87E223363E445 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DA6D50DBF1A16BCA96303A8B /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Elearning/Pods-Elearning-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -751,6 +804,7 @@
 				307C500B1D065EA100182659 /* NetworkConnection.m in Sources */,
 				EFD0F8FC1CF40B1E0084B877 /* AnswerItem.m in Sources */,
 				303E0D441CED93450053A0FD /* main.m in Sources */,
+				30EFC2141D0FBC9400569DC4 /* RegisterManager.m in Sources */,
 				EF4C7BAD1D0525C70087E96C /* LoadingView.m in Sources */,
 				EF3D8FAB1CEEBAA100AF117D /* HomeViewController.m in Sources */,
 				EF19B7EB1CF688D70085E921 /* WordListManager.m in Sources */,

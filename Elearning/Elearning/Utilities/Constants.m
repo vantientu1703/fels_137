@@ -11,10 +11,21 @@
 @implementation Constants
 
 #pragma mark - API
-NSString *const URL_LOGIN = @"https://manh-nt.herokuapp.com/login.json";
+NSString *const BASE_URL = @"https://manh-nt.herokuapp.com";
+NSString *const LOG_IN_REQUEST = @"/login.json";
+NSString *const LOG_OUT_REQUEST = @"/logout.json";;
+NSString *const SIGN_UP_REQUEST = @"/users.json";
+NSString *const GET_CATEGORIES_REQUEST = @"/categories.json";
+NSString *const LESSONS_REQUEST = @"/lessons.json";
+NSString *const REQUEST_EXTENSION = @".json";
 NSString *const SESSION_EMAIL = @"session[email]=";
 NSString *const SESSION_PASSWORD = @"session[password]=";
 NSString *const SESSION_REMEMBERME = @"session[remember_me]=";
+NSString *const AUTH_TOKEN = @"auth_token=";
+NSString *const USER_NAME = @"user[name]=";
+NSString *const USER_EMAIL = @"user[email]=";
+NSString *const USER_PASSWORD = @"user[password]=";
+NSString *const USER_PASSWORD_CONFIRMATION = @"user[password_confirmation]=";
 
 #pragma mark - Regex
 NSString *const EMAIL_FILTER_REGEX = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";

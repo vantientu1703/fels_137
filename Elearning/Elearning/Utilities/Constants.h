@@ -11,10 +11,21 @@
 @interface Constants : NSObject
 
 #pragma mark - API
-extern NSString *const URL_LOGIN;
+extern NSString *const BASE_URL;
+extern NSString *const LOG_IN_REQUEST;
+extern NSString *const LOG_OUT_REQUEST;
+extern NSString *const SIGN_UP_REQUEST;
+extern NSString *const GET_CATEGORIES_REQUEST;
+extern NSString *const LESSONS_REQUEST;
+extern NSString *const REQUEST_EXTENSION;
 extern NSString *const SESSION_EMAIL;
 extern NSString *const SESSION_PASSWORD;
 extern NSString *const SESSION_REMEMBERME;
+extern NSString *const AUTH_TOKEN;
+extern NSString *const USER_NAME;
+extern NSString *const USER_EMAIL;
+extern NSString *const USER_PASSWORD;
+extern NSString *const USER_PASSWORD_CONFIRMATION;
 
 #pragma mark - Regex
 extern NSString *const EMAIL_FILTER_REGEX;
