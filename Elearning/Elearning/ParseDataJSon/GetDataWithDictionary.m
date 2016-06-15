@@ -13,14 +13,15 @@
 - (NSMutableArray *)arrayWordListWithDictionary:(NSDictionary *)dictionaryWordList {
     NSMutableArray *arrWords = dictionaryWordList[@"words"];
     NSString *totalPages = dictionaryWordList[@"total_pages"];
-    
     NSMutableArray *arr = [[NSMutableArray alloc] init];
-    [arr addObject:arrWords];
-    [arr addObject:totalPages];
+    arr = [@[arrWords, totalPages] mutableCopy];
     return arr;
 }
 - (NSMutableArray *)arrayCategoriesWithDictionary:(NSDictionary *)dictionaryCategories {
-    NSMutableArray *arr = dictionaryCategories[@"categories"];
+    NSMutableArray *arrCategories = dictionaryCategories[@"categories"];
+    NSString *totalPages = dictionaryCategories[@"total_pages"];
+    NSMutableArray *arr = [[NSMutableArray alloc] init];
+    arr = [@[arrCategories, totalPages] mutableCopy];
     return arr;
 }
 - (NSDictionary *)lessonCategoryWithDictionary:(NSDictionary *)dictionaryLesson {

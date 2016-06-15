@@ -1,0 +1,28 @@
+//
+//  Elearning-Prefix.pch
+//  Elearning
+//
+//  Created by Văn Tiến Tú on 6/8/16.
+//  Copyright © 2016 Framgia. All rights reserved.
+//
+#import <Availability.h>
+
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#ifdef DEBUG
+#   define DebugLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#else
+#   define DebugLog(...)
+#endif
+
+#endif
+
+#ifndef Elearning_Prefix_pch
+#define Elearning_Prefix_pch
+
+#endif /* Elearning_Prefix_pch */
+
+

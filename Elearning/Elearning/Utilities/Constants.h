@@ -37,7 +37,9 @@ extern NSString *const AVATAR_ALERT_MESSAGE;
 extern NSString *const CANCEL_MESSAGE;
 extern NSString *const CHOSSE_GALLERY_MESSAGE;
 extern NSString *const TAKE_PHOTO_MESSAGE;
-
+extern NSString *const PAGE;
+extern NSString *const PER_PAGE;
+extern NSString *const USER_TOKEN;
 #pragma mark - Regex
 extern NSString *const EMAIL_FILTER_REGEX;
 

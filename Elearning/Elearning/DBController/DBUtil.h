@@ -8,15 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import "WordItem.h"
-//#import "CategoryItem.h"
+#import "CategoryItem.h"
 #import "AnswerItem.h"
 //#import "LessonCategoryItem.h"
 
 @interface DBUtil : NSObject
 
 + (WordItem *)dbItemToWordItem:(NSDictionary *)dictionary;
-//+ (CategoryItem *)dbCategoryItem: (NSDictionary *)dictionary;
++ (CategoryItem *)dbCategoryItem: (NSDictionary *)dictionary;
 + (AnswerItem *)dbAnswerItem:(NSDictionary *)dictionary;
+// TODO: Dành cho màn hình lesson
 //+ (LessonCategoryItem *)dbLessonCategoryItem: (NSDictionary *)dictionary;
 
 @end
