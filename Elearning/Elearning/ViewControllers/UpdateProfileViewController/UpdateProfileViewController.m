@@ -11,8 +11,8 @@
 #import "User.h"
 #import "StoreData.h"
 #import "LoadingView.h"
-//#import "SDWebImage.h"
 #import "UIImageView+WebCache.h"
+
 @interface UpdateProfileViewController ()
 @property (strong, nonatomic) LoadingView *loadingView;
 @property (strong, nonatomic) UIImagePickerController *avatarPicker;

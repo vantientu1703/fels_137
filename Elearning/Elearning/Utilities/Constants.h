@@ -28,6 +28,9 @@ extern NSString *const USER_EMAIL;
 extern NSString *const USER_PASSWORD;
 extern NSString *const USER_PASSWORD_CONFIRMATION;
 extern NSString *const USER_AVATAR;
+extern NSString *const PAGE;
+extern NSString *const PER_PAGE;
+extern NSString *const USER_TOKEN;
 
 #pragma mark - Avatar
 extern NSString *const ERROR_CAMERA_TITLE;
@@ -37,9 +40,7 @@ extern NSString *const AVATAR_ALERT_MESSAGE;
 extern NSString *const CANCEL_MESSAGE;
 extern NSString *const CHOSSE_GALLERY_MESSAGE;
 extern NSString *const TAKE_PHOTO_MESSAGE;
-extern NSString *const PAGE;
-extern NSString *const PER_PAGE;
-extern NSString *const USER_TOKEN;
+
 #pragma mark - Regex
 extern NSString *const EMAIL_FILTER_REGEX;
 
@@ -55,6 +56,7 @@ extern NSString *const ERROR_MAX_LENGTH_NAME;
 extern NSString *const ERROR_LOST_CONNECTION;
 extern NSString *const ERROR_UPDATE_PROFILE;
 extern NSString *const UPDATE_PROFILE_SUCCESS;
+extern NSString *const LEARNED_WORD_FORMAT;
 
 #pragma mark - Data Validation Constants
 extern NSInteger const MAX_LENGTH_USER_NAME;
