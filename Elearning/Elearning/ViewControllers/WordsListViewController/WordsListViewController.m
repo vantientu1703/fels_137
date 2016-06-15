@@ -24,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnAll1;
 @property (weak, nonatomic) IBOutlet UIButton *btnAll2;
 @property (strong, nonatomic) LoadingView *loadingView;
+@property (strong, nonatomic) User *user;
 
 @end
 
@@ -55,6 +56,7 @@ NSInteger const PER_PAGE_DATA = 10;
     [super viewDidLoad];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.user = [StoreData getUser];
     _currentPageWordList = 1;
     _currentPageCategory = 1;
     self.wordsList = [[NSMutableArray alloc] init];
@@ -69,7 +71,7 @@ NSInteger const PER_PAGE_DATA = 10;
     [self getWordListWithCategoryId:_categoryID
                                page:_currentPageWordList
                              option:_option];
-    [self getCategoriesListWithAuthToken:USER_TOKEN
+    [self getCategoriesListWithAuthToken:self.user.authToken
                                     page:_currentPageCategory
                              perPageData:PER_PAGE_DATA];
 }
@@ -116,7 +118,7 @@ NSInteger const PER_PAGE_DATA = 10;
                     _totalPagesCategory = [arrCategories[1] integerValue];
                     if (_currentPageCategory < _totalPagesCategory) {
                         _currentPageCategory++;
-                        [self getCategoriesListWithAuthToken:USER_TOKEN page:_currentPageCategory perPageData:PER_PAGE_DATA];
+                        [self getCategoriesListWithAuthToken:self.user.authToken page:_currentPageCategory perPageData:PER_PAGE_DATA];
                     }
                 }
             }
@@ -137,11 +139,11 @@ NSInteger const PER_PAGE_DATA = 10;
                                   option:optionWords
                                     page:currentPage
                              perPageData:PER_PAGE_DATA
-                               authToken:USER_TOKEN];
+                               authToken:self.user.authToken];
 }
 - (void)didReceiveWordListWithArray:(NSMutableArray *)arrWords message:(NSString *)message withError:(NSError *)error {
     if (!error) {
-        if ([message isEqualToString:@""]) {
+        if (!message.length) {
             [self animateDismissLoadingView];
             if (arrWords.count > 0) {
                 NSMutableArray *arr = arrWords[0];
@@ -166,7 +168,7 @@ NSInteger const PER_PAGE_DATA = 10;
 
 - (void)turnOnAlertWithMessage:(NSString *)message {
     UIAlertController *alerController;
-    if ([message isEqualToString:@""]) {
+    if (!message.length) {
         alerController = [UIAlertController alertControllerWithTitle:TITLE_REMINDER message:MESSAGE_REMINDER_CHECK_INTERNET preferredStyle:UIAlertControllerStyleActionSheet];
     } else {
         alerController = [UIAlertController alertControllerWithTitle:TITLE_REMINDER message:message preferredStyle:UIAlertControllerStyleActionSheet];

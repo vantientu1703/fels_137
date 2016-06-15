@@ -23,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *arrCategories;
 @property (strong, nonatomic) LoadingView *loadingView;
+@property (strong, nonatomic) User *user;
 
 @end
 
@@ -50,6 +51,7 @@ NSString *const NO_LEARN_WORD = @"Your are have not learn word";
     [super viewDidLoad];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.user = [StoreData getUser];
     self.arrCategories = [[NSMutableArray alloc] init];
 }
 - (void) viewWillAppear:(BOOL)animated {
@@ -60,7 +62,7 @@ NSString *const NO_LEARN_WORD = @"Your are have not learn word";
     _currentPageCategory = 1;
     //Get categories
     self.arrCategories = [[NSMutableArray alloc] init];
-    [self getCategoriesListWithAuthToken:USER_TOKEN
+    [self getCategoriesListWithAuthToken:self.user.authToken
                                     page:_currentPageCategory
                              perPageData:_perPageData];
 }
@@ -121,7 +123,7 @@ NSString *const NO_LEARN_WORD = @"Your are have not learn word";
     }
     UIAlertAction *reloadAction = [UIAlertAction actionWithTitle:RELOAD_ACT style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         _currentPageCategory = 1;
-        [self getCategoriesListWithAuthToken:USER_TOKEN page:_currentPageCategory perPageData:_perPageData];
+        [self getCategoriesListWithAuthToken:self.user.authToken page:_currentPageCategory perPageData:_perPageData];
     }];
     UIAlertAction *quitAction = [UIAlertAction actionWithTitle:QUIT_ACT style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
         exit(0);
@@ -162,17 +164,18 @@ NSString *const NO_LEARN_WORD = @"Your are have not learn word";
 - (void) loadMoreCategories {
     if (_currentPageCategory < _totalPagesCategory) {
         _currentPageCategory++;
-        [self getCategoriesListWithAuthToken:USER_TOKEN page:_currentPageCategory perPageData:_perPageData];
+        [self getCategoriesListWithAuthToken:self.user.authToken page:_currentPageCategory perPageData:_perPageData];
     }
 }
+
 #pragma mark - UITableViewDelegate
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-// TODO: Gọi sang màn hình lesson
-//    UIStoryboard *st = [UIStoryboard storyboardWithName:NAME_SECONDSTORYBOARD bundle:nil];
-//    LessonViewController *lessionViewConotroller = [st instantiateViewControllerWithIdentifier:IDENTIFIER_LESSONV_VIEWCONTROLLER];
-//    lessionViewConotroller.categoryItem = [DBUtil dbCategoryItem:self.arrCategories[indexPath.row]];
-//    [self.navigationController pushViewController:lessionViewConotroller animated:YES];
+    UIStoryboard *st = [UIStoryboard storyboardWithName:NAME_SECONDSTORYBOARD bundle:nil];
+    LessonViewController *lessionViewConotroller = [st instantiateViewControllerWithIdentifier:IDENTIFIER_LESSONV_VIEWCONTROLLER];
+    lessionViewConotroller.categoryItem = self.arrCategories[indexPath.row];
+    [self.navigationController pushViewController:lessionViewConotroller animated:YES];
 }
 @end
 
