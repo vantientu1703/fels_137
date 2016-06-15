@@ -21,7 +21,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OyQ-ZL-8pV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-352" y="113"/>
+            <point key="canvasLocation" x="-391" y="107"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -224,7 +224,7 @@
         <!--Register View Controller-->
         <scene sceneID="Xwg-u1-LZf">
             <objects>
-                <viewController id="tyA-Jp-b1b" customClass="RegisterViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterViewController" id="tyA-Jp-b1b" customClass="RegisterViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jCd-8v-da5"/>
                         <viewControllerLayoutGuide type="bottom" id="RxR-Xe-tK4"/>
@@ -433,7 +433,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="400" y="107"/>
+            <point key="canvasLocation" x="378" y="107"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="qA9-nV-t3s">
@@ -672,12 +672,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qGL-FX-cwr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1191" y="113"/>
+            <point key="canvasLocation" x="812" y="107"/>
         </scene>
         <!--Update Profile View Controller-->
         <scene sceneID="J5g-wZ-tGT">
             <objects>
-                <viewController id="60p-Qx-qhQ" customClass="UpdateProfileViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UpdateProfileViewController" id="60p-Qx-qhQ" customClass="UpdateProfileViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="j9H-9G-Yjt"/>
                         <viewControllerLayoutGuide type="bottom" id="Jec-qx-jhd"/>
@@ -730,21 +730,33 @@
                                 <rect key="frame" x="25" y="111" width="275" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="60p-Qx-qhQ" id="9WO-KJ-EvG"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oSl-iA-Yod">
                                 <rect key="frame" x="25" y="183" width="275" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="60p-Qx-qhQ" id="utP-EC-NVj"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fj0-cx-Qgh">
                                 <rect key="frame" x="25" y="259" width="275" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="60p-Qx-qhQ" id="fvS-7Q-zLm"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZYF-tX-Eio">
                                 <rect key="frame" x="25" y="335" width="275" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="60p-Qx-qhQ" id="aEu-Yh-Pvj"/>
+                                </connections>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="noavatar.png" translatesAutoresizingMaskIntoConstraints="NO" id="mPg-8p-qFq">
                                 <rect key="frame" x="131" y="383" width="124" height="116"/>
@@ -859,6 +871,9 @@
                                 <rect key="frame" x="16" y="7" width="71" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="btnCancel:" destination="60p-Qx-qhQ" eventType="touchUpInside" id="BcR-Ts-ys8"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="QsT-K2-ZNh">
@@ -866,15 +881,30 @@
                                 <rect key="frame" x="233" y="7" width="71" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Update"/>
+                                <connections>
+                                    <action selector="btnUpdate:" destination="60p-Qx-qhQ" eventType="touchUpInside" id="dF0-gZ-d53"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="imgAvatar" destination="mPg-8p-qFq" id="8c4-b7-VwP"/>
+                        <outlet property="lblAlert" destination="cNz-P7-DRd" id="wuF-ie-GPj"/>
+                        <outlet property="txtEmail" destination="vPF-08-UoL" id="9wq-Em-cTv"/>
+                        <outlet property="txtFullName" destination="ZYF-tX-Eio" id="vN0-k8-AO7"/>
+                        <outlet property="txtNewPassword" destination="oSl-iA-Yod" id="pKL-5U-FFN"/>
+                        <outlet property="txtRetypePassword" destination="fj0-cx-Qgh" id="t8F-nh-Kwm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t9k-uV-sG5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="fqw-pi-1OB"/>
+                <tapGestureRecognizer id="fqw-pi-1OB">
+                    <connections>
+                        <action selector="turnOffKeyboard:" destination="60p-Qx-qhQ" id="RQB-oy-k0n"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1574" y="113"/>
+            <point key="canvasLocation" x="1238" y="113"/>
         </scene>
     </scenes>
     <resources>
