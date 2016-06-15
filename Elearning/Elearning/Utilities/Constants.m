@@ -30,7 +30,8 @@ NSString *const USER_PASSWORD_CONFIRMATION = @"user[password_confirmation]=";
 NSString *const USER_AVATAR = @"user[avatar]=";
 NSString *const PAGE = @"page=";
 NSString *const PER_PAGE = @"per_page=";
-NSString *const USER_TOKEN = @"-Kx03yy94NhYc81Shz63_g";
+NSString *const CATEGORIES = @"/categories/";
+NSString *const LESSON = @"lesson";
 
 #pragma mark - Avatar
 NSString *const ERROR_CAMERA_TITLE = @"Oops!!!";
