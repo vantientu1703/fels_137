@@ -28,6 +28,9 @@ NSString *const USER_EMAIL = @"user[email]=";
 NSString *const USER_PASSWORD = @"user[password]=";
 NSString *const USER_PASSWORD_CONFIRMATION = @"user[password_confirmation]=";
 NSString *const USER_AVATAR = @"user[avatar]=";
+NSString *const PAGE = @"page=";
+NSString *const PER_PAGE = @"per_page=";
+NSString *const USER_TOKEN = @"-Kx03yy94NhYc81Shz63_g";
 
 #pragma mark - Avatar
 NSString *const ERROR_CAMERA_TITLE = @"Oops!!!";
@@ -37,9 +40,6 @@ NSString *const AVATAR_ALERT_MESSAGE = @"Select a photo";
 NSString *const CANCEL_MESSAGE = @"Cancel";
 NSString *const CHOSSE_GALLERY_MESSAGE = @"Choose from Gallery";
 NSString *const TAKE_PHOTO_MESSAGE = @"Take Photo";
-NSString *const PAGE = @"page=";
-NSString *const PER_PAGE = @"per_page=";
-NSString *const USER_TOKEN = @"-Kx03yy94NhYc81Shz63_g";
 
 #pragma mark - Regex
 NSString *const EMAIL_FILTER_REGEX = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
@@ -56,7 +56,7 @@ NSString *const ERROR_MAX_LENGTH_NAME = @"Name can not be longer than ";
 NSString *const ERROR_LOST_CONNECTION = @"Lost connection";
 NSString *const ERROR_UPDATE_PROFILE = @"Error update";
 NSString *const UPDATE_PROFILE_SUCCESS = @"Update success";
-
+NSString *const LEARNED_WORD_FORMAT = @"Learned %d words";
 
 #pragma mark - Data Validation Constants
 NSInteger const MAX_LENGTH_USER_NAME = 50;
