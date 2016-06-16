@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imgAvatar;
 - (IBAction)btnWords:(id)sender;
 - (IBAction)btnLesson:(id)sender;
+- (IBAction)btnUpdateProfile:(id)sender;
 @end
 
 @implementation HomeViewController
@@ -53,6 +54,10 @@
     [self goLesson];
 }
 
+- (IBAction)btnUpdateProfile:(id)sender {
+    [self goUpdateProfile];
+}
+
 #pragma mark - UITableView
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.userActivityArray.count;
@@ -68,6 +73,12 @@
 }
 
 #pragma mark - Open other screen
+- (void)goUpdateProfile {
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"UpdateProfileViewController"];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 - (void)goWords {
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"SecondStoryboard" bundle:nil];
     UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"WordsListViewController"];

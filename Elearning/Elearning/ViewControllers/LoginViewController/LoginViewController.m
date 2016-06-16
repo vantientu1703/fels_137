@@ -13,7 +13,7 @@
 #import "HomeViewController.h"
 #import "LoadingView.h"
 
-@interface LoginViewController ()
+@interface LoginViewController ()<LoginManagerDelegate>
 @property (strong, nonatomic) LoadingView *loadingView;
 @property (weak, nonatomic) IBOutlet UITextField *txtEmail;
 @property (weak, nonatomic) IBOutlet UITextField *txtPassword;
@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnRememberMe;
 - (IBAction)btnLogin:(id)sender;
 - (IBAction)btnRememberMe:(id)sender;
+- (IBAction)btnRegister:(id)sender;
 @end
 
 @implementation LoginViewController
@@ -65,6 +66,10 @@ BOOL _rememberMeChecked;
         [self.btnRememberMe setImage:[UIImage imageNamed:@"checked.png"] forState:UIControlStateNormal];
     }
     [self saveRememberMe];
+}
+
+- (IBAction)btnRegister:(id)sender {
+    [self goRegister];
 }
 
 #pragma mark - Check Remember Me
@@ -113,6 +118,12 @@ BOOL _rememberMeChecked;
 }
 
 #pragma mark - Open other screen
+- (void)goRegister {
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"RegisterViewController"];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 - (void)goHome {
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"HomeViewController"];

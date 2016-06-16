@@ -30,7 +30,7 @@
 }
 
 + (void)responseWithUrl:(NSString *)url
-                 method:(METHODS *)method
+                 method:(METHODS)method
                  params:(NSString *)params
           resultRequest:(ResultRequest)complete {
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
