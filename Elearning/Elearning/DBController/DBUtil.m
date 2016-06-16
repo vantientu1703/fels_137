@@ -31,7 +31,7 @@
     }
     return categoryItem;
 }
-+ (AnswerItem *)dbAnswerItem: (NSDictionary *)dictionary {
++ (AnswerItem *)dbAnswerItem:(NSDictionary *)dictionary {
     AnswerItem *answerItem = [AnswerItem new];
     if (dictionary) {
         answerItem.ID = dictionary[@"id"];
@@ -40,15 +40,14 @@
     }
     return answerItem;
 }
-// TODO: Dành cho màn hình lesson
-//+ (LessonCategoryItem *)dbLessonCategoryItem: (NSDictionary *)dictionary {
-//    LessonCategoryItem *lesson = [[LessonCategoryItem alloc] init];
-//    if (dictionary) {
-//        NSDictionary *dicLesson = [NSDictionary dictionaryWithDictionary:dictionary[@"lesson"]];
-//        lesson.ID = dicLesson[@"id"];
-//        lesson.arrWords = dicLesson[@"words"];
-//        lesson.name = dicLesson[@"name"];
-//    }
-//    return lesson;
-//}
++ (LessonCategoryItem *)dbLessonCategoryItem:(NSDictionary *)dictionary {
+    LessonCategoryItem *lesson = [[LessonCategoryItem alloc] init];
+    if (dictionary) {
+        NSDictionary *dicLesson = dictionary[@"lesson"];
+        lesson.ID = dicLesson[@"id"];
+        lesson.arrWords = dicLesson[@"words"];
+        lesson.name = dicLesson[@"name"];
+    }
+    return lesson;
+}
 @end

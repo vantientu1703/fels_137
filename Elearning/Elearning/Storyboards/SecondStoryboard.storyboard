@@ -278,7 +278,7 @@
         <!--Lesson View Controller-->
         <scene sceneID="fcv-0h-C22">
             <objects>
-                <viewController storyboardIdentifier="LessonViewController" id="KIv-uK-mTP" customClass="LessonViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LessonViewcontroller" id="KIv-uK-mTP" customClass="LessonViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eEX-l8-kcA"/>
                         <viewControllerLayoutGuide type="bottom" id="TOf-TV-jMX"/>
@@ -340,7 +340,7 @@
                                     <action selector="btnNext:" destination="KIv-uK-mTP" eventType="touchUpInside" id="XXf-tQ-pQx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7cj-y6-BZs">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7cj-y6-BZs">
                                 <rect key="frame" x="61" y="189" width="253" height="30"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -348,10 +348,10 @@
                                     <constraint firstAttribute="width" constant="253" id="wc3-tJ-V4U"/>
                                 </constraints>
                                 <connections>
-                                    <action selector="btnAnswer1:" destination="KIv-uK-mTP" eventType="touchUpInside" id="XHd-46-khr"/>
+                                    <action selector="btnAnswerPress:" destination="KIv-uK-mTP" eventType="touchUpInside" id="t8O-IP-nEF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Sa-Qg-ROJ">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Sa-Qg-ROJ">
                                 <rect key="frame" x="61" y="227" width="253" height="30"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -359,21 +359,10 @@
                                     <constraint firstAttribute="width" constant="253" id="73e-yc-xdc"/>
                                 </constraints>
                                 <connections>
-                                    <action selector="btnAnswer2:" destination="KIv-uK-mTP" eventType="touchUpInside" id="Btg-hO-97a"/>
+                                    <action selector="btnAnswerPress:" destination="KIv-uK-mTP" eventType="touchUpInside" id="xiI-kZ-BlQ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8lc-UX-kWa">
-                                <rect key="frame" x="61" y="265" width="253" height="30"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="175-X7-vKm"/>
-                                    <constraint firstAttribute="width" constant="253" id="Fb3-Rq-4Ej"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="btnAnswer3:" destination="KIv-uK-mTP" eventType="touchUpInside" id="kcE-X3-B6q"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lsf-Wi-wn1">
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lsf-Wi-wn1">
                                 <rect key="frame" x="61" y="303" width="253" height="30"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -381,7 +370,18 @@
                                     <constraint firstAttribute="width" constant="253" id="r9P-Yo-TJR"/>
                                 </constraints>
                                 <connections>
-                                    <action selector="btnAnswer4:" destination="KIv-uK-mTP" eventType="touchUpInside" id="aOk-14-Vqa"/>
+                                    <action selector="btnAnswerPress:" destination="KIv-uK-mTP" eventType="touchUpInside" id="tLR-i4-AV6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8lc-UX-kWa">
+                                <rect key="frame" x="61" y="265" width="253" height="30"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="175-X7-vKm"/>
+                                    <constraint firstAttribute="width" constant="253" id="Fb3-Rq-4Ej"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="btnAnswerPress:" destination="KIv-uK-mTP" eventType="touchUpInside" id="RuM-Bu-XeU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -415,10 +415,10 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="btnAnswer1" destination="7cj-y6-BZs" id="E83-9h-gav"/>
-                        <outlet property="btnAnswer2" destination="1Sa-Qg-ROJ" id="fwM-hu-2xx"/>
-                        <outlet property="btnAnswer3" destination="8lc-UX-kWa" id="9kQ-2q-TSf"/>
-                        <outlet property="btnAnswer4" destination="Lsf-Wi-wn1" id="M3V-KR-UaI"/>
+                        <outlet property="btnAnswer1" destination="7cj-y6-BZs" id="W4F-F4-O6T"/>
+                        <outlet property="btnAnswer2" destination="1Sa-Qg-ROJ" id="WMP-Zv-B6k"/>
+                        <outlet property="btnAnswer3" destination="8lc-UX-kWa" id="Wdz-W0-rrl"/>
+                        <outlet property="btnAnswer4" destination="Lsf-Wi-wn1" id="AdP-iY-ebT"/>
                         <outlet property="labelTotalWords" destination="tOB-b7-XPL" id="cE9-yn-zWE"/>
                         <outlet property="scrollView" destination="EOd-TJ-QfP" id="d5v-WA-596"/>
                     </connections>
@@ -459,7 +459,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eAh-bn-Z6u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="738.5" y="139.5"/>
+            <point key="canvasLocation" x="736.5" y="115.5"/>
         </scene>
     </scenes>
     <resources>

@@ -30,7 +30,8 @@ extern NSString *const USER_PASSWORD_CONFIRMATION;
 extern NSString *const USER_AVATAR;
 extern NSString *const PAGE;
 extern NSString *const PER_PAGE;
-extern NSString *const USER_TOKEN;
+extern NSString *const CATEGORIES;
+extern NSString *const LESSON;
 
 #pragma mark - Avatar
 extern NSString *const ERROR_CAMERA_TITLE;
