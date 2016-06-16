@@ -15,6 +15,7 @@
 #import "LessonCategoryItem.h"
 #import "LoadingView.h"
 #import "Constants.h"
+#import "HomeViewController.h"
 
 @interface LessonViewController ()<UIScrollViewDelegate,LessonCategoryManagerDelegate>
 
@@ -43,6 +44,8 @@ NSString *const TITLER_REMINDER_CONTROLLER = @"Reminder";
 NSString *const RELOAD_ACT_CONTROLLER = @"Reload";
 NSString *const QUIT_ACT_CONTROLLER = @"Quit";
 NSString *const CHECK_INTERNET = @"Check internet network,please";
+NSString *const SECOND_STORYBOARD = @"SecondStoryboard";
+NSString *const RESULT_VIEWCONTROLLER = @"ResultViewController";
 NSInteger const NUMBER_OF_PAGE_SCROLLVIEW = 5;
 NSInteger const NUMBER_OF_TAG = 4;
 - (void)viewDidLoad {
@@ -55,6 +58,7 @@ NSInteger const NUMBER_OF_TAG = 4;
     self.scrollView.pagingEnabled = YES;
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(btnResultView:)];
     [self getLessonWithCategoryID:self.categoryItem.ID authToken:self.user.authToken];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(popToHomeViewController:) name:KEY_POPVIEW object:nil];
 }
 
 #pragma mark - LoadingView
@@ -70,17 +74,23 @@ NSInteger const NUMBER_OF_TAG = 4;
         [self.loadingView removeFromSuperview];
     }];
 }
+- (IBAction)popToHomeViewController:(id)sender {
+    NSMutableArray *allViewControllers = [NSMutableArray arrayWithArray:self.navigationController.viewControllers];
+    for (UIViewController *aViewController in allViewControllers) {
+        if ([aViewController isKindOfClass:[HomeViewController class]]) {
+            [self.navigationController popToViewController:aViewController animated:YES];
+        }
+    }
+}
 - (IBAction)btnResultView:(id)sender {
 
-//    UIStoryboard *st = [UIStoryboard storyboardWithName:@"SecondStoryboard" bundle:nil];
-//    ResultViewController *revc = [st instantiateViewControllerWithIdentifier:@"resultviewcontroller"];
-//    
-//    revc.arrLearnedWords = self.arrLearnedWords;
-//    revc.arrWords = self.arrWords;
-//    
-//    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:revc];
-//    nav.modalPresentationStyle = UIModalPresentationFormSheet;
-//    [self presentViewController:nav animated:YES completion:nil];
+    UIStoryboard *st = [UIStoryboard storyboardWithName:SECOND_STORYBOARD bundle:nil];
+    ResultViewController *revc = [st instantiateViewControllerWithIdentifier:RESULT_VIEWCONTROLLER];
+    revc.arrLearnedWords = self.arrLearnedWords;
+    revc.arrWords = self.arrWords;
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:revc];
+    nav.modalPresentationStyle = UIModalPresentationFormSheet;
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 #pragma mark - LessonCategoryManagerDelegate
@@ -150,22 +160,24 @@ NSInteger const NUMBER_OF_TAG = 4;
     // setup content size for scrollview
     [self.arrWords enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * NUMBER_OF_PAGE_SCROLLVIEW, self.scrollView.frame.size.height);
-        UIView *viewWords = [[UIView alloc] initWithFrame:CGRectMake(idx * size.width, 0.f,size.width, size.height)];
-        [self.scrollView addSubview:viewWords];
-        WordItem *wordItem = [DBUtil dbItemToWordItem:obj];
-        UILabel *labelWord = [[UILabel alloc] initWithFrame:CGRectMake(0.f, 10.f, size.width, 40.f)];
-        labelWord.backgroundColor = [UIColor whiteColor];
-        labelWord.textAlignment = NSTextAlignmentCenter;
-        labelWord.text = wordItem.content;
-        labelWord.textColor = [UIColor blackColor];
-        [viewWords addSubview:labelWord];
+        if (idx < NUMBER_OF_PAGE_SCROLLVIEW) {
+            UIView *viewWords = [[UIView alloc] initWithFrame:CGRectMake(idx * size.width, 0.f,size.width, size.height)];
+            [self.scrollView addSubview:viewWords];
+            WordItem *wordItem = [DBUtil dbItemToWordItem:obj];
+            UILabel *labelWord = [[UILabel alloc] initWithFrame:CGRectMake(0.f, 10.f, size.width, 40.f)];
+            labelWord.backgroundColor = [UIColor whiteColor];
+            labelWord.textAlignment = NSTextAlignmentCenter;
+            labelWord.text = wordItem.content;
+            labelWord.textColor = [UIColor blackColor];
+            [viewWords addSubview:labelWord];
+        }
     }];
     // set up button
     WordItem *newWord = [WordItem new];
     if (self.arrWords.count > 0) {
         newWord = [DBUtil dbItemToWordItem:self.arrWords[0]];
         self.arrAnswers = newWord.arrAnswers;
-        [self.arrLearnedWords enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [self.arrAnswers enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             NSString *title = obj[@"content"];
             [self setTitleForButtonNoSelect:title withTag:idx + 1];
         }];
