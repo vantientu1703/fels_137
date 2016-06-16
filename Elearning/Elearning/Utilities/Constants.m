@@ -31,7 +31,7 @@ NSString *const USER_AVATAR = @"user[avatar]=";
 NSString *const PAGE = @"page=";
 NSString *const PER_PAGE = @"per_page=";
 NSString *const CATEGORIES = @"/categories/";
-NSString *const LESSON = @"lesson";
+NSString *const LESSON = @"lessons";
 
 #pragma mark - Avatar
 NSString *const ERROR_CAMERA_TITLE = @"Oops!!!";
