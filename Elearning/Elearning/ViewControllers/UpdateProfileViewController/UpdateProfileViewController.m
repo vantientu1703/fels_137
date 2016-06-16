@@ -13,7 +13,7 @@
 #import "LoadingView.h"
 #import "UIImageView+WebCache.h"
 
-@interface UpdateProfileViewController ()
+@interface UpdateProfileViewController ()<UpdateProfileManagerDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 @property (strong, nonatomic) LoadingView *loadingView;
 @property (strong, nonatomic) UIImagePickerController *avatarPicker;
 @property (strong, nonatomic) NSString *avatarString;
@@ -141,8 +141,6 @@
 
 #pragma mark - Open other screen
 - (void)goHome {
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"HomeViewController"];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

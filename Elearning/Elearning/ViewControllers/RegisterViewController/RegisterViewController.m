@@ -12,7 +12,7 @@
 #import "StoreData.h"
 #import "LoadingView.h"
 
-@interface RegisterViewController ()
+@interface RegisterViewController ()<RegisterManagerDelegate>
 @property (strong, nonatomic) LoadingView *loadingView;
 @property (weak, nonatomic) IBOutlet UITextField *txtEmail;
 @property (weak, nonatomic) IBOutlet UITextField *txtPassword;
@@ -87,8 +87,6 @@
 }
 
 - (void)goLogin {
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"LoginViewController"];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
