@@ -10,11 +10,11 @@
 #import "NetworkConnection.h"
 #import "Constants.h"
 
-NSString *const PARAM_UPDATE_CATEGORY = @"lesson[learned]=%d, \
-                                          lesson[results_attributes][0][id]=%@& \
-                                          lesson[results_attributes][0][answer_id]=%@& \
-                                          lesson[results_attributes][1][id]=%@& \
-                                          lesson[results_attributes][1][answer_id]=%@ \
+NSString *const PARAM_UPDATE_CATEGORY = @"lesson[learned]=%d&\
+                                          lesson[results_attributes][0][id]=%@&\
+                                          lesson[results_attributes][0][answer_id]=%@&\
+                                          lesson[results_attributes][1][id]=%@&\
+                                          lesson[results_attributes][1][answer_id]=%@\
                                           &auth_token=%@";
 @implementation LessonCategoryManager
 
