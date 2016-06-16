@@ -66,5 +66,5 @@ NSInteger const MIN_LENGTH_PASSWORD = 6;
 
 #pragma mark - KeyChain
 NSString *const KEYCHAIN_KEY_SERVICE = @"com.framgia.elearning";
-
+NSString *const KEY_POPVIEW = @"key_popview";
 @end
