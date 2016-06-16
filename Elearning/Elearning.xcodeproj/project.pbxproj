@@ -25,10 +25,6 @@
 		30B4D8941D10FB6400F03C96 /* UserActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B4D8931D10FB6400F03C96 /* UserActivityTableViewCell.m */; };
 		30B7ABEF1D05777E00553861 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B7ABEE1D05777E00553861 /* User.m */; };
 		30B7ABF21D0577BF00553861 /* UserInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B7ABF11D0577BF00553861 /* UserInput.m */; };
-		30D0B8661CFD32E00051F40A /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D0B8651CFD32E00051F40A /* NSString+Base64.m */; };
-		30D0B8691CFD32FC0051F40A /* NSData+CommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D0B8681CFD32FC0051F40A /* NSData+CommonCrypto.m */; };
-		30D0B86C1CFD331D0051F40A /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D0B86B1CFD331D0051F40A /* NSData+Base64.m */; };
-		30D0B86F1CFD333A0051F40A /* AESCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D0B86E1CFD333A0051F40A /* AESCrypt.m */; };
 		30EBAC821CFBED730027A635 /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 30EBAC7D1CFBED730027A635 /* avatar.png */; };
 		30EBAC831CFBED730027A635 /* edit.png in Resources */ = {isa = PBXBuildFile; fileRef = 30EBAC7E1CFBED730027A635 /* edit.png */; };
 		30EBAC841CFBED730027A635 /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = 30EBAC7F1CFBED730027A635 /* email.png */; };
@@ -51,9 +47,9 @@
 		EF3D8FAF1CEEBAA100AF117D /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8FA41CEEBAA100AF117D /* ResultViewController.m */; };
 		EF3D8FB01CEEBAA100AF117D /* UpdateProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8FA71CEEBAA100AF117D /* UpdateProfileViewController.m */; };
 		EF3D8FB11CEEBAA100AF117D /* WordsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8FAA1CEEBAA100AF117D /* WordsListViewController.m */; };
-		EF4C7BAD1D0525C70087E96C /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4C7BAC1D0525C70087E96C /* LoadingView.m */; settings = {ASSET_TAGS = (); }; };
-		EF5615761D10F9DC0000B470 /* LessonCategoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5615751D10F9DC0000B470 /* LessonCategoryManager.m */; settings = {ASSET_TAGS = (); }; };
-		EF56157A1D10FA6A0000B470 /* LessonCategoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5615791D10FA6A0000B470 /* LessonCategoryItem.m */; settings = {ASSET_TAGS = (); }; };
+		EF4C7BAD1D0525C70087E96C /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4C7BAC1D0525C70087E96C /* LoadingView.m */; };
+		EF5615761D10F9DC0000B470 /* LessonCategoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5615751D10F9DC0000B470 /* LessonCategoryManager.m */; };
+		EF56157A1D10FA6A0000B470 /* LessonCategoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5615791D10FA6A0000B470 /* LessonCategoryItem.m */; };
 		EF9DDBDB1D07DAB400415FD5 /* CategoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9DDBDA1D07DAB400415FD5 /* CategoryManager.m */; };
 		EFD0F8CE1CF3E79B0084B877 /* next_2.png in Resources */ = {isa = PBXBuildFile; fileRef = EFD0F8CA1CF3E79B0084B877 /* next_2.png */; };
 		EFD0F8D01CF3E79B0084B877 /* pre_2.png in Resources */ = {isa = PBXBuildFile; fileRef = EFD0F8CC1CF3E79B0084B877 /* pre_2.png */; };
@@ -65,7 +61,7 @@
 		EFEC70CC1CEEFD6800D5BBEE /* WordItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEC70CB1CEEFD6800D5BBEE /* WordItem.m */; };
 		EFF050931CF822F4003A9CF5 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = EFF050911CF822F4003A9CF5 /* green.png */; };
 		EFF050941CF822F4003A9CF5 /* grey.png in Resources */ = {isa = PBXBuildFile; fileRef = EFF050921CF822F4003A9CF5 /* grey.png */; };
-		EFF77A6E1CEDA6F300EAFAD5 /* SecondStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFF77A6D1CEDA6F300EAFAD5 /* SecondStoryboard.storyboard */; settings = {ASSET_TAGS = (); }; };
+		EFF77A6E1CEDA6F300EAFAD5 /* SecondStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFF77A6D1CEDA6F300EAFAD5 /* SecondStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,14 +116,6 @@
 		30B7ABEE1D05777E00553861 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Model/User.m; sourceTree = "<group>"; };
 		30B7ABF01D0577BF00553861 /* UserInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserInput.h; path = Model/UserInput.h; sourceTree = "<group>"; };
 		30B7ABF11D0577BF00553861 /* UserInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserInput.m; path = Model/UserInput.m; sourceTree = "<group>"; };
-		30D0B8641CFD32E00051F40A /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Base64.h"; path = "AES/NSString+Base64.h"; sourceTree = "<group>"; };
-		30D0B8651CFD32E00051F40A /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Base64.m"; path = "AES/NSString+Base64.m"; sourceTree = "<group>"; };
-		30D0B8671CFD32FC0051F40A /* NSData+CommonCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+CommonCrypto.h"; path = "AES/NSData+CommonCrypto.h"; sourceTree = "<group>"; };
-		30D0B8681CFD32FC0051F40A /* NSData+CommonCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+CommonCrypto.m"; path = "AES/NSData+CommonCrypto.m"; sourceTree = "<group>"; };
-		30D0B86A1CFD331D0051F40A /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Base64.h"; path = "AES/NSData+Base64.h"; sourceTree = "<group>"; };
-		30D0B86B1CFD331D0051F40A /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+Base64.m"; path = "AES/NSData+Base64.m"; sourceTree = "<group>"; };
-		30D0B86D1CFD333A0051F40A /* AESCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AESCrypt.h; path = AES/AESCrypt.h; sourceTree = "<group>"; };
-		30D0B86E1CFD333A0051F40A /* AESCrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AESCrypt.m; path = AES/AESCrypt.m; sourceTree = "<group>"; };
 		30EBAC7D1CFBED730027A635 /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = avatar.png; path = Resources/Images/avatar.png; sourceTree = "<group>"; };
 		30EBAC7E1CFBED730027A635 /* edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = edit.png; path = Resources/Images/edit.png; sourceTree = "<group>"; };
 		30EBAC7F1CFBED730027A635 /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = email.png; path = Resources/Images/email.png; sourceTree = "<group>"; };
@@ -243,7 +231,6 @@
 		303E0D411CED93450053A0FD /* Elearning */ = {
 			isa = PBXGroup;
 			children = (
-				30D0B8631CFD32B70051F40A /* AES */,
 				3064ED051CF69A080088709D /* Utilities */,
 				3064ECFB1CF684B90088709D /* Network */,
 				EFF77A6A1CEDA5AB00EAFAD5 /* ViewControllers */,
@@ -326,21 +313,6 @@
 				309A3CEB1CF43AA4004F7F98 /* noavatar.png */,
 			);
 			name = Images;
-			sourceTree = "<group>";
-		};
-		30D0B8631CFD32B70051F40A /* AES */ = {
-			isa = PBXGroup;
-			children = (
-				30D0B8641CFD32E00051F40A /* NSString+Base64.h */,
-				30D0B8651CFD32E00051F40A /* NSString+Base64.m */,
-				30D0B8671CFD32FC0051F40A /* NSData+CommonCrypto.h */,
-				30D0B8681CFD32FC0051F40A /* NSData+CommonCrypto.m */,
-				30D0B86A1CFD331D0051F40A /* NSData+Base64.h */,
-				30D0B86B1CFD331D0051F40A /* NSData+Base64.m */,
-				30D0B86D1CFD333A0051F40A /* AESCrypt.h */,
-				30D0B86E1CFD333A0051F40A /* AESCrypt.m */,
-			);
-			name = AES;
 			sourceTree = "<group>";
 		};
 		EF081D661CF1D91B008D9EBF /* DBController */ = {
@@ -600,6 +572,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 303E0D6C1CED93450053A0FD /* Build configuration list for PBXNativeTarget "Elearning" */;
 			buildPhases = (
+				EDEB1A54E890393C1835DB1B /* 📦 Check Pods Manifest.lock */,
 				91829B07DF789DDD0B8FC934 /* [CP] Check Pods Manifest.lock */,
 				D182FB9C19B87E223363E445 /* [CP] Check Pods Manifest.lock */,
 				9F20D1852CB3AA28EC5BAABE /* [CP] Check Pods Manifest.lock */,
@@ -848,6 +821,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Elearning/Pods-Elearning-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		EDEB1A54E890393C1835DB1B /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -864,13 +852,11 @@
 				EFEC70CC1CEEFD6800D5BBEE /* WordItem.m in Sources */,
 				EF3D8FAD1CEEBAA100AF117D /* LoginViewController.m in Sources */,
 				EF3D8F951CEEBA5D00AF117D /* CategoriesViewController.m in Sources */,
-				30D0B86C1CFD331D0051F40A /* NSData+Base64.m in Sources */,
 				30816E201D0A518D006BC291 /* Constants.m in Sources */,
 				30B7ABF21D0577BF00553861 /* UserInput.m in Sources */,
 				307C50081D065E8800182659 /* ParseJson.m in Sources */,
 				30B7ABEF1D05777E00553861 /* User.m in Sources */,
 				30B4D8941D10FB6400F03C96 /* UserActivityTableViewCell.m in Sources */,
-				30D0B8661CFD32E00051F40A /* NSString+Base64.m in Sources */,
 				30FA00F21D090AC4006A5582 /* StoreData.m in Sources */,
 				EF3D8FAE1CEEBAA100AF117D /* RegisterViewController.m in Sources */,
 				307C500B1D065EA100182659 /* NetworkConnection.m in Sources */,
@@ -883,12 +869,10 @@
 				EF56157A1D10FA6A0000B470 /* LessonCategoryItem.m in Sources */,
 				EF19B7EB1CF688D70085E921 /* WordListManager.m in Sources */,
 				EF3D8FAF1CEEBAA100AF117D /* ResultViewController.m in Sources */,
-				30D0B8691CFD32FC0051F40A /* NSData+CommonCrypto.m in Sources */,
 				30AE525C1D0FE07D00835FFD /* UpdateProfileManager.m in Sources */,
 				EF081D6C1CF1EB07008D9EBF /* DBUtil.m in Sources */,
 				EF081D6F1CF1ED31008D9EBF /* CategoryItem.m in Sources */,
 				EF3D8FB11CEEBAA100AF117D /* WordsListViewController.m in Sources */,
-				30D0B86F1CFD333A0051F40A /* AESCrypt.m in Sources */,
 				30FA00EF1D090AA3006A5582 /* DataValidation.m in Sources */,
 				EF3D8FB01CEEBAA100AF117D /* UpdateProfileViewController.m in Sources */,
 				305382E71D0A87C300933D8D /* LoginManager.m in Sources */,
