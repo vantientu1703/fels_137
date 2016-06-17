@@ -68,7 +68,19 @@
     UserActivityTableViewCell *cell = (UserActivityTableViewCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     NSDictionary *activity = self.userActivityArray[indexPath.row];
     cell.activityContentLabel.text = [activity valueForKey:@"content"];
-    cell.activityCreatedDate.text = [activity valueForKey:@"created_at"];
+    // set view time
+    NSTimeZone *inputTimeZone = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];
+    NSDateFormatter *inputDateFormatter = [[NSDateFormatter alloc] init];
+    [inputDateFormatter setTimeZone:inputTimeZone];
+    [inputDateFormatter setDateFormat:@"YYYY-MM-dd'T'HH:mm:ss.SSS'Z'"];
+    NSString *inputString = [activity valueForKey:@"created_at"];
+    NSDate *date = [inputDateFormatter dateFromString:inputString];
+    NSTimeZone *outputTimeZone = [NSTimeZone localTimeZone];
+    NSDateFormatter *outputDateFormatter = [[NSDateFormatter alloc] init];
+    [outputDateFormatter setTimeZone:outputTimeZone];
+    [outputDateFormatter setDateFormat:@"dd-MM-YYYY hh:mm a"];
+    NSString *outputString = [outputDateFormatter stringFromDate:date];
+    cell.activityCreatedDate.text = outputString;
     return cell;
 }
 
