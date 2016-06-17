@@ -2,16 +2,19 @@ PODS:
   - SDWebImage (3.8.1):
     - SDWebImage/Core (= 3.8.1)
   - SDWebImage/Core (3.8.1)
+  - TPKeyboardAvoiding (1.3)
   - UICKeyChainStore (2.1.0)
 
 DEPENDENCIES:
   - SDWebImage
+  - TPKeyboardAvoiding
   - UICKeyChainStore
 
 SPEC CHECKSUMS:
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
+  TPKeyboardAvoiding: a5138f318c06fb3e151f886e18ce4a72695d9cbe
   UICKeyChainStore: f1cbd42216a113f0165de1e733e62905b8823432
 
-PODFILE CHECKSUM: 50d77fab2b661e83ddaf0a3e650e71334146ea38
+PODFILE CHECKSUM: dca58328b798abc330681ccc3ceb4ba01d3dfb9f
 
 COCOAPODS: 1.0.1

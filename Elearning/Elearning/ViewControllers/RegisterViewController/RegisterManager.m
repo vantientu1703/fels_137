@@ -50,7 +50,8 @@
         NSString *paramRegister = [NSString stringWithFormat:@"%@%@&%@%@&%@%@&%@%@", USER_NAME, name, USER_EMAIL, email, USER_PASSWORD, password, USER_PASSWORD_CONFIRMATION, confirmedPassword];
         [NetworkConnection responseWithUrl:urlRegister method:POST params:paramRegister resultRequest:^(NSDictionary *dic, NSError *error) {
             NSString *message = ERROR_LOST_CONNECTION;
-            if (!error && dic) {
+            NSLog(@"dic = %@", dic);
+            if (!error) {
                 message = dic[@"message"];
                 if (!message) {
                     message = dic[@"error"];
@@ -59,6 +60,18 @@
                         user = [ParseJson parseResponse:dic];
                         [StoreData setUser:user];
                         message = @"";
+                    }
+                } else {
+                    NSDictionary *dict = dic[@"message"];
+                    if (dict[@"email"]) {
+                        NSArray *arrMessage = dict[@"email"];
+                        if (arrMessage.count > 0) {
+                            message = [NSString stringWithFormat:@"%@ %@", EMAIL, arrMessage[0]];
+                        } else {
+                            message = CHECK_AGAIN;
+                        }
+                    } else {
+                        message = CHECK_AGAIN;
                     }
                 }
             }
