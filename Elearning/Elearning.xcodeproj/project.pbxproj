@@ -47,10 +47,10 @@
 		EF3D8FAF1CEEBAA100AF117D /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8FA41CEEBAA100AF117D /* ResultViewController.m */; };
 		EF3D8FB01CEEBAA100AF117D /* UpdateProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8FA71CEEBAA100AF117D /* UpdateProfileViewController.m */; };
 		EF3D8FB11CEEBAA100AF117D /* WordsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D8FAA1CEEBAA100AF117D /* WordsListViewController.m */; };
-		EF4C7BAD1D0525C70087E96C /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4C7BAC1D0525C70087E96C /* LoadingView.m */; settings = {ASSET_TAGS = (); }; };
-		EF5615761D10F9DC0000B470 /* LessonCategoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5615751D10F9DC0000B470 /* LessonCategoryManager.m */; settings = {ASSET_TAGS = (); }; };
-		EF56157A1D10FA6A0000B470 /* LessonCategoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5615791D10FA6A0000B470 /* LessonCategoryItem.m */; settings = {ASSET_TAGS = (); }; };
-		EF5DBCF31D1254B100569394 /* ResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5DBCF21D1254B100569394 /* ResultTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		EF4C7BAD1D0525C70087E96C /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4C7BAC1D0525C70087E96C /* LoadingView.m */; };
+		EF5615761D10F9DC0000B470 /* LessonCategoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5615751D10F9DC0000B470 /* LessonCategoryManager.m */; };
+		EF56157A1D10FA6A0000B470 /* LessonCategoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5615791D10FA6A0000B470 /* LessonCategoryItem.m */; };
+		EF5DBCF31D1254B100569394 /* ResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5DBCF21D1254B100569394 /* ResultTableViewCell.m */; };
 		EF9DDBDB1D07DAB400415FD5 /* CategoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9DDBDA1D07DAB400415FD5 /* CategoryManager.m */; };
 		EFD0F8CE1CF3E79B0084B877 /* next_2.png in Resources */ = {isa = PBXBuildFile; fileRef = EFD0F8CA1CF3E79B0084B877 /* next_2.png */; };
 		EFD0F8D01CF3E79B0084B877 /* pre_2.png in Resources */ = {isa = PBXBuildFile; fileRef = EFD0F8CC1CF3E79B0084B877 /* pre_2.png */; };
@@ -577,6 +577,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 303E0D6C1CED93450053A0FD /* Build configuration list for PBXNativeTarget "Elearning" */;
 			buildPhases = (
+				8C283D7DB31E531F45AC7AE8 /* [CP] Check Pods Manifest.lock */,
 				EDEB1A54E890393C1835DB1B /* [CP] Check Pods Manifest.lock */,
 				91829B07DF789DDD0B8FC934 /* [CP] Check Pods Manifest.lock */,
 				D182FB9C19B87E223363E445 /* [CP] Check Pods Manifest.lock */,
@@ -764,6 +765,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Elearning/Pods-Elearning-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C283D7DB31E531F45AC7AE8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		91829B07DF789DDD0B8FC934 /* [CP] Check Pods Manifest.lock */ = {

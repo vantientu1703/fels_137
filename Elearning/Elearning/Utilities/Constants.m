@@ -58,6 +58,8 @@ NSString *const ERROR_LOST_CONNECTION = @"Lost connection";
 NSString *const ERROR_UPDATE_PROFILE = @"Error update";
 NSString *const UPDATE_PROFILE_SUCCESS = @"Update success";
 NSString *const LEARNED_WORD_FORMAT = @"Learned %d words";
+NSString *const CHECK_AGAIN = @"Please check again";
+NSString *const EMAIL = @"Email";
 
 #pragma mark - Data Validation Constants
 NSInteger const MAX_LENGTH_USER_NAME = 50;

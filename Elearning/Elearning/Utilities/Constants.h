@@ -58,6 +58,8 @@ extern NSString *const ERROR_LOST_CONNECTION;
 extern NSString *const ERROR_UPDATE_PROFILE;
 extern NSString *const UPDATE_PROFILE_SUCCESS;
 extern NSString *const LEARNED_WORD_FORMAT;
+extern NSString *const CHECK_AGAIN;
+extern NSString *const EMAIL;
 
 #pragma mark - Data Validation Constants
 extern NSInteger const MAX_LENGTH_USER_NAME;
