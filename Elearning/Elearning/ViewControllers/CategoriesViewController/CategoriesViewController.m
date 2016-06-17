@@ -24,6 +24,7 @@
 @property (strong, nonatomic) NSMutableArray *arrCategories;
 @property (strong, nonatomic) LoadingView *loadingView;
 @property (strong, nonatomic) User *user;
+@property (strong, nonatomic) UILabel *labelNoData;
 
 @end
 
@@ -34,7 +35,7 @@
     NSInteger _perPageData;
 }
 
-CGFloat const CELL_HEIGHT = 80.f;
+CGFloat const CATEGORY_CELL_HEIGHT = 80.f;
 NSString *const TITLE_ALERT = @"Reminder";
 NSString *const TITLE_ACTION_RELOAD = @"Reload";
 NSString *const TITLE_ACTION_QUIT = @"Quit";
@@ -46,6 +47,7 @@ NSString *const RELOAD_ACT = @"Reload";
 NSString *const QUIT_ACT = @"Quit";
 NSString *const TOTAL_LEARNED_WORD = @"Your have learned %ld words";
 NSString *const NO_LEARN_WORD = @"Your are have not learn word";
+NSString * const LABEL_NO_DATA = @"No data :)~";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -101,6 +103,12 @@ NSString *const NO_LEARN_WORD = @"Your are have not learn word";
                     CategoryItem *categoryIem = [DBUtil dbCategoryItem:item];
                     [self.arrCategories addObject:categoryIem];
                 }
+                if (!self.arrCategories.count) {
+                    [self setupLabelNoData];
+                } else {
+                    [self.labelNoData removeFromSuperview];
+                    self.labelNoData = nil;
+                }
                 if (arrCategories.count > 1) {
                     _totalPagesCategory = [arrCategories[1] integerValue];
                 }
@@ -111,7 +119,19 @@ NSString *const NO_LEARN_WORD = @"Your are have not learn word";
         }
     }
 }
-
+- (void)setupLabelNoData {
+    CGSize size = [UIScreen mainScreen].bounds.size;
+    if (!self.labelNoData) {
+        self.labelNoData = [[UILabel alloc] initWithFrame:CGRectMake(0.f, 0.f, 200.f, 100.f)];
+        self.labelNoData.center = CGPointMake(size.width / 2, size.height / 2);
+        self.labelNoData.text = LABEL_NO_DATA;
+        [self.labelNoData setFont:[UIFont systemFontOfSize:20.f]];
+        self.labelNoData.textColor = [UIColor blackColor];
+        self.labelNoData.textAlignment = NSTextAlignmentCenter;
+        self.labelNoData.alpha = 0.3f;
+        [self.view addSubview:self.labelNoData];
+    }
+}
 #pragma mark - AlertController
 
 - (void)turnOnAlertWithMessage:(NSString *)message {
@@ -151,10 +171,14 @@ NSString *const NO_LEARN_WORD = @"Your are have not learn word";
         cell.labelTotalLearnedWord.text = [NSString stringWithFormat:NO_LEARN_WORD];
     }
     [cell.imageViewCategory sd_setImageWithURL:categoryItem.url placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
+    CGSize size = [UIScreen mainScreen].bounds.size;
+    UIView *separatorLineView = [[UIView alloc] initWithFrame:CGRectMake(10.0f, CATEGORY_CELL_HEIGHT - 1.f, size.width - 10.0f, 1.0f)];
+    separatorLineView.backgroundColor = [UIColor lightGrayColor];
+    [cell.contentView addSubview:separatorLineView];
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return CELL_HEIGHT;
+    return CATEGORY_CELL_HEIGHT;
 }
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == self.arrCategories.count - 1) {
@@ -178,4 +202,3 @@ NSString *const NO_LEARN_WORD = @"Your are have not learn word";
     [self.navigationController pushViewController:lessionViewConotroller animated:YES];
 }
 @end
-
