@@ -20,6 +20,8 @@
 
 @implementation ResultViewController
 
+CGFloat const RESULT_CELL_HEIGHT = 60.f;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -47,9 +49,13 @@
     } else {
         cell.imageViewResult.image = [UIImage imageNamed:@"hoicham.png"];
     }
+    CGSize size = [UIScreen mainScreen].bounds.size;
+    UIView *separatorLineView = [[UIView alloc] initWithFrame:CGRectMake(10.0f, RESULT_CELL_HEIGHT - 1.f, size.width - 10.0f, 1.0f)];
+    separatorLineView.backgroundColor = [UIColor lightGrayColor];
+    [cell.contentView addSubview:separatorLineView];
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 60;
+    return RESULT_CELL_HEIGHT;
 }
 @end

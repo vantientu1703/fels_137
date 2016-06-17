@@ -19,6 +19,8 @@
 
 @interface LessonViewController ()<UIScrollViewDelegate,LessonCategoryManagerDelegate>
 
+@property (weak, nonatomic) IBOutlet UIButton *btnNext;
+@property (weak, nonatomic) IBOutlet UIButton *btnPre;
 @property (weak, nonatomic) IBOutlet UILabel *labelTotalWords;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIButton *btnAnswer1;
@@ -54,6 +56,7 @@ NSInteger const NUMBER_OF_TAG = 4;
     self.user = [StoreData getUser];
     [self setupLoadingView];
     _pagingAtScrollView = 0;
+    self.btnPre.enabled = NO;
     self.scrollView.delegate = self;
     self.scrollView.pagingEnabled = YES;
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(btnResultView:)];
@@ -135,6 +138,7 @@ NSInteger const NUMBER_OF_TAG = 4;
         alerController = [UIAlertController alertControllerWithTitle:TITLER_REMINDER_CONTROLLER message:message preferredStyle:UIAlertControllerStyleActionSheet];
     }
     UIAlertAction *reloadAction = [UIAlertAction actionWithTitle:RELOAD_ACT_CONTROLLER style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self reloadDataCurrentQuestion];
     }];
     UIAlertAction *quitAction = [UIAlertAction actionWithTitle:QUIT_ACT_CONTROLLER style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
         exit(0);
@@ -145,6 +149,15 @@ NSInteger const NUMBER_OF_TAG = 4;
                        animated:YES
                      completion:nil];
 }
+- (void)reloadDataCurrentQuestion {
+    for (NSInteger i = 1; i < NUMBER_OF_TAG; i++) {
+        [self setColorForButtonNoSelectWithTag:i];
+    }
+    _numberOfLearnedWords--;
+    self.labelTotalWords.text = [NSString stringWithFormat:@"%ld/%lu", _numberOfLearnedWords, NUMBER_OF_PAGE_SCROLLVIEW];
+    NSMutableArray *arr = [@[@"",@""] mutableCopy];
+    [self.arrLearnedWords replaceObjectAtIndex:_pagingAtScrollView withObject:arr];
+}
 - (void)loadData {
     self.arrWords = self.lesson.arrWords;
     self.arrLearnedWords = [[NSMutableArray alloc] init];
@@ -152,8 +165,7 @@ NSInteger const NUMBER_OF_TAG = 4;
     self.labelTotalWords.text = [NSString stringWithFormat:@"0/%lu",NUMBER_OF_PAGE_SCROLLVIEW];
     // Init arrLearnedWords is blank
     for (int i = 0; i < NUMBER_OF_PAGE_SCROLLVIEW; i ++) {
-        NSMutableArray *arr = [[NSMutableArray alloc] init];
-        arr = [@[@"",@""] mutableCopy];
+        NSMutableArray *arr = [@[@"",@""] mutableCopy];
         [self.arrLearnedWords addObject:arr];
     }
     CGSize size = self.scrollView.frame.size;
@@ -188,6 +200,7 @@ NSInteger const NUMBER_OF_TAG = 4;
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     _pagingAtScrollView = self.scrollView.contentOffset.x / self.scrollView.frame.size.width;
+    [self enableButtonPreAndNext];
     // Setup button when change question
     WordItem *newWord = [WordItem new];
     newWord = [DBUtil dbItemToWordItem:self.arrWords[_pagingAtScrollView]];
@@ -203,10 +216,24 @@ NSInteger const NUMBER_OF_TAG = 4;
         }
     }];
 }
+
+- (void) enableButtonPreAndNext {
+    if (!_pagingAtScrollView) {
+        self.btnPre.enabled = NO;
+    } else {
+        self.btnPre.enabled = YES;
+    }
+    if (_pagingAtScrollView == NUMBER_OF_PAGE_SCROLLVIEW - 1) {
+        self.btnNext.enabled = NO;
+    } else {
+        self.btnNext.enabled = YES;
+    }
+}
 #pragma mark - Implement all buttons
 
 - (IBAction)btnPre:(id)sender {
     _pagingAtScrollView--;
+    [self enableButtonPreAndNext];
     if (_pagingAtScrollView < 0) {
         _pagingAtScrollView = 0;
     }
@@ -215,6 +242,7 @@ NSInteger const NUMBER_OF_TAG = 4;
 - (IBAction)btnNext:(id)sender {
     if (_pagingAtScrollView < NUMBER_OF_PAGE_SCROLLVIEW - 1) {
         _pagingAtScrollView++;
+        [self enableButtonPreAndNext];
     }
     [self setTitleColorForButton];
 }

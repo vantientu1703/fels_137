@@ -419,6 +419,8 @@
                         <outlet property="btnAnswer2" destination="1Sa-Qg-ROJ" id="WMP-Zv-B6k"/>
                         <outlet property="btnAnswer3" destination="8lc-UX-kWa" id="Wdz-W0-rrl"/>
                         <outlet property="btnAnswer4" destination="Lsf-Wi-wn1" id="AdP-iY-ebT"/>
+                        <outlet property="btnNext" destination="D2D-jv-cjI" id="4RG-nG-fZk"/>
+                        <outlet property="btnPre" destination="ida-xX-PgK" id="pCG-wi-4lB"/>
                         <outlet property="labelTotalWords" destination="tOB-b7-XPL" id="cE9-yn-zWE"/>
                         <outlet property="scrollView" destination="EOd-TJ-QfP" id="d5v-WA-596"/>
                     </connections>
@@ -439,7 +441,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="u6P-um-CGw">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="u6P-um-CGw">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -447,7 +449,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sdv-yB-krj" id="fiM-Pz-yRa">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IIt-7Z-Q4a">
