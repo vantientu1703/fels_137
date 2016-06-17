@@ -25,6 +25,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnAll2;
 @property (strong, nonatomic) LoadingView *loadingView;
 @property (strong, nonatomic) User *user;
+@property (strong, nonatomic) UILabel *labelNoData;
 
 @end
 
@@ -50,7 +51,9 @@ NSString *const ALL_ACTION = @"All";
 NSString *const NOT_LEARN_ACTION = @"Not learn";
 NSString *const LEARNED_ACTION = @"Learned";
 NSString *const NAME_WORDLIST_TABLEVIEWCELL = @"WordListTableViewCell";
+NSString *const NO_DATA = @"No data :)~";
 NSInteger const PER_PAGE_DATA = 10;
+CGFloat const CELL_HEIGHT_WORDLIST = 44.f;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -151,6 +154,12 @@ NSInteger const PER_PAGE_DATA = 10;
                     WordItem *word = [DBUtil dbItemToWordItem:item ];
                     [self.wordsList addObject:word];
                 }
+                if (!self.wordsList.count) {
+                    [self setupLabelNoData];
+                } else {
+                    [self.labelNoData removeFromSuperview];
+                    self.labelNoData = nil;
+                }
                 [self.tableView reloadData];
                 if (arrWords.count > 1) {
                     _totalPageWordList = [arrWords[1] integerValue];
@@ -163,7 +172,20 @@ NSInteger const PER_PAGE_DATA = 10;
         [self turnOnAlertWithMessage:message];
     }
 }
-
+#pragma mark - Init label no data;
+- (void)setupLabelNoData {
+    CGSize size = [UIScreen mainScreen].bounds.size;
+    if (!self.labelNoData) {
+        self.labelNoData = [[UILabel alloc] initWithFrame:CGRectMake(0.f, 0.f, 200.f, 100.f)];
+        self.labelNoData.center = CGPointMake(size.width / 2, size.height / 2);
+        self.labelNoData.text = NO_DATA;
+        [self.labelNoData setFont:[UIFont systemFontOfSize:20.f]];
+        self.labelNoData.textColor = [UIColor blackColor];
+        self.labelNoData.textAlignment = NSTextAlignmentCenter;
+        self.labelNoData.alpha = 0.3f;
+        [self.view addSubview:self.labelNoData];
+    }
+}
 #pragma mark - AlertController when disconnected
 
 - (void)turnOnAlertWithMessage:(NSString *)message {
@@ -265,8 +287,12 @@ NSInteger const PER_PAGE_DATA = 10;
             cell.labelAnswer.text = answer.content;
         }
     }
-    cell.labelQuestion.text = [NSString stringWithFormat:@"%ld.%@", (long)indexPath.row, wordItem.content];
-        return cell;
+    cell.labelQuestion.text = [NSString stringWithFormat:@"%ld.%@", (long)indexPath.row + 1, wordItem.content];
+    CGSize size = [UIScreen mainScreen].bounds.size;
+    UIView *separatorLineView = [[UIView alloc] initWithFrame:CGRectMake(10.0f, CELL_HEIGHT_WORDLIST - 1.f, size.width - 10.0f, 1.0f)];
+    separatorLineView.backgroundColor = [UIColor lightGrayColor];
+    [cell.contentView addSubview:separatorLineView];
+    return cell;
 }
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == self.wordsList.count - 1) {
