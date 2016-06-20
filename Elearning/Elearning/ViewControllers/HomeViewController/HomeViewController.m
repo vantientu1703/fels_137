@@ -12,8 +12,11 @@
 #import "UserActivityTableViewCell.h"
 #import "UIImageView+WebCache.h"
 #import "Constants.h"
+#import "HomeManager.h"
+#import "LoadingView.h"
 
-@interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface HomeViewController ()<HomeManagerDelegate,UITableViewDelegate,UITableViewDataSource>
+@property (strong, nonatomic) LoadingView *loadingView;
 @property (strong, nonatomic) NSArray *userActivityArray;
 @property (weak, nonatomic) IBOutlet UITableView *userActivityTableView;
 @property (weak, nonatomic) IBOutlet UILabel *txtName;
@@ -33,17 +36,11 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    User *user = [StoreData getUser];
-    self.txtName.text = user.name;
-    self.txtEmail.text = user.email;
-    self.txtLearned.text = [NSString stringWithFormat:LEARNED_WORD_FORMAT, user.learnedWords];
-    self.userActivityArray = user.activities;
-    NSURL *url = [NSURL URLWithString:user.avatar];
-    [self.imgAvatar sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"place.png"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-        if (!image) {
-            self.imgAvatar.image = [UIImage imageNamed:@"noavatar.png"];
-        }
-    }];
+    self.loadingView = [[LoadingView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    [self.view addSubview:self.loadingView];
+    HomeManager *homeManager = [[HomeManager alloc] init];
+    homeManager.delegate = self;
+    [homeManager doShowUser];
 }
 
 - (IBAction)btnWords:(id)sender {
@@ -56,6 +53,32 @@
 
 - (IBAction)btnUpdateProfile:(id)sender {
     [self goUpdateProfile];
+}
+
+#pragma mark - HomeManagerDelegate
+- (void)didReceiveUser:(User *)user withMessage:(NSString *)message withError:(NSError *)error {
+    [self.loadingView removeFromSuperview];
+    self.loadingView = nil;
+    if (!error && !message.length && user) {
+        self.txtName.text = user.name;
+        self.txtEmail.text = user.email;
+        self.txtLearned.text = [NSString stringWithFormat:LEARNED_WORD_FORMAT, user.learnedWords];
+        self.userActivityArray = [[NSMutableArray alloc] init];
+        self.userActivityArray = user.activities;
+        [self.userActivityTableView reloadData];
+        NSURL *url = [NSURL URLWithString:user.avatar];
+        [self.imgAvatar sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"place.png"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+            if (!image) {
+                self.imgAvatar.image = [UIImage imageNamed:@"noavatar.png"];
+            }
+        }];
+    } else {
+        [AlertManager showAlertWithTitle:REMINDER_TITLE message:message viewControler:self reloadAction:^{
+            HomeManager *homeManager = [[HomeManager alloc] init];
+            homeManager.delegate = self;
+            [homeManager doShowUser];
+        }];
+    }
 }
 
 #pragma mark - UITableView

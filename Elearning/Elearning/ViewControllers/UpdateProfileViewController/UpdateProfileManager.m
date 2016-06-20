@@ -30,7 +30,7 @@
     // check local ok, send request update profile
     if (!errorMessage.length) {
         User *user = [StoreData getUser];
-        NSString *urlUpdateProfile = [NSString stringWithFormat:@"%@%@%d%@", BASE_URL, USER_REQUEST, user.userId, REQUEST_EXTENSION];
+        NSString *urlUpdateProfile = [NSString stringWithFormat:@"%@%@%ld%@", BASE_URL, USER_REQUEST, user.userId, REQUEST_EXTENSION];
         NSString *paramUpdateProfile = [NSString stringWithFormat:@"%@%@&%@%@&%@%@&%@%@&%@%@&%@%@", USER_NAME, name, USER_EMAIL, email, USER_PASSWORD, password, USER_PASSWORD_CONFIRMATION, passwordConfirmation, USER_AVATAR, avatarString, AUTH_TOKEN, user.authToken];
         [NetworkConnection responseWithUrl:urlUpdateProfile method:PATCH params:paramUpdateProfile resultRequest:^(NSDictionary *dic, NSError *error) {
             NSString *message = ERROR_LOST_CONNECTION;

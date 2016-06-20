@@ -10,12 +10,12 @@
 
 @interface User : NSObject
 
-@property (assign, nonatomic) int userId;
+@property (nonatomic) NSInteger userId;
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *email;
 @property (strong, nonatomic) NSString *avatar;
 @property (strong, nonatomic) NSString *authToken;
-@property (assign, nonatomic) int learnedWords;
+@property (nonatomic) NSInteger learnedWords;
 @property (strong, nonatomic) NSArray *activities;
 
 @end

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		301D46F41D1781EC00DE362A /* HomeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 301D46F31D1781EC00DE362A /* HomeManager.m */; };
+		30362E1D1D17E2CA00DDCF74 /* AlertManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 30362E1C1D17E2CA00DDCF74 /* AlertManager.m */; };
 		303E0D441CED93450053A0FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 303E0D431CED93450053A0FD /* main.m */; };
 		303E0D471CED93450053A0FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 303E0D461CED93450053A0FD /* AppDelegate.m */; };
 		303E0D4D1CED93450053A0FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 303E0D4B1CED93450053A0FD /* Main.storyboard */; };
@@ -84,6 +86,10 @@
 
 /* Begin PBXFileReference section */
 		03E4EBA392282420DC3FF34A /* Pods-Elearning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Elearning.release.xcconfig"; path = "Pods/Target Support Files/Pods-Elearning/Pods-Elearning.release.xcconfig"; sourceTree = "<group>"; };
+		301D46F21D1781EC00DE362A /* HomeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeManager.h; sourceTree = "<group>"; };
+		301D46F31D1781EC00DE362A /* HomeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeManager.m; sourceTree = "<group>"; };
+		30362E1B1D17E2CA00DDCF74 /* AlertManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AlertManager.h; path = Utilities/AlertManager.h; sourceTree = "<group>"; };
+		30362E1C1D17E2CA00DDCF74 /* AlertManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlertManager.m; path = Utilities/AlertManager.m; sourceTree = "<group>"; };
 		303E0D3F1CED93450053A0FD /* Elearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Elearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		303E0D431CED93450053A0FD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		303E0D451CED93450053A0FD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -299,6 +305,8 @@
 				30FA00F11D090AC4006A5582 /* StoreData.m */,
 				30816E1E1D0A518D006BC291 /* Constants.h */,
 				30816E1F1D0A518D006BC291 /* Constants.m */,
+				30362E1B1D17E2CA00DDCF74 /* AlertManager.h */,
+				30362E1C1D17E2CA00DDCF74 /* AlertManager.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -379,6 +387,8 @@
 				EF3D8F981CEEBAA100AF117D /* HomeViewController.m */,
 				30B4D8921D10FB6400F03C96 /* UserActivityTableViewCell.h */,
 				30B4D8931D10FB6400F03C96 /* UserActivityTableViewCell.m */,
+				301D46F21D1781EC00DE362A /* HomeManager.h */,
+				301D46F31D1781EC00DE362A /* HomeManager.m */,
 			);
 			name = HomeViewController;
 			path = ViewControllers/HomeViewController;
@@ -876,6 +886,7 @@
 				30816E201D0A518D006BC291 /* Constants.m in Sources */,
 				30B7ABF21D0577BF00553861 /* UserInput.m in Sources */,
 				307C50081D065E8800182659 /* ParseJson.m in Sources */,
+				30362E1D1D17E2CA00DDCF74 /* AlertManager.m in Sources */,
 				30B7ABEF1D05777E00553861 /* User.m in Sources */,
 				EF5DBCF31D1254B100569394 /* ResultTableViewCell.m in Sources */,
 				30B4D8941D10FB6400F03C96 /* UserActivityTableViewCell.m in Sources */,
@@ -896,6 +907,7 @@
 				EF081D6F1CF1ED31008D9EBF /* CategoryItem.m in Sources */,
 				EF3D8FB11CEEBAA100AF117D /* WordsListViewController.m in Sources */,
 				30FA00EF1D090AA3006A5582 /* DataValidation.m in Sources */,
+				301D46F41D1781EC00DE362A /* HomeManager.m in Sources */,
 				EF3D8FB01CEEBAA100AF117D /* UpdateProfileViewController.m in Sources */,
 				305382E71D0A87C300933D8D /* LoginManager.m in Sources */,
 			);

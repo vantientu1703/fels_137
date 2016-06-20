@@ -23,7 +23,8 @@
     user.email = [defaults objectForKey:@"email"];
     user.avatar = [defaults objectForKey:@"avatar"];
     user.activities = [defaults objectForKey:@"activities"];
-    user.userId = chain[@"user_id"].intValue;
+    user.userId = [defaults integerForKey:@"user_id"];
+    user.learnedWords = [defaults integerForKey:@"learned_words"];
     user.authToken = chain[@"auth_token"];
     return user;
 }
@@ -35,7 +36,8 @@
     [defaults setObject:user.email forKey:@"email"];
     [defaults setObject:user.avatar forKey:@"avatar"];
     [defaults setObject:user.activities forKey:@"activities"];
-    [chain setString:[NSString stringWithFormat:@"%d", user.userId] forKey:@"user_id"];
+    [defaults setInteger:user.userId forKey:@"user_id"];
+    [defaults setInteger:user.learnedWords forKey:@"learned_words"];
     [chain setString:user.authToken forKey:@"auth_token"];
 }
 
@@ -46,7 +48,8 @@
     [defaults removeObjectForKey:@"email"];
     [defaults removeObjectForKey:@"avatar"];
     [defaults removeObjectForKey:@"activities"];
-    [chain removeItemForKey:@"user_id"];
+    [defaults removeObjectForKey:@"user_id"];
+    [defaults removeObjectForKey:@"learned_words"];
     [chain removeItemForKey:@"auth_token"];
 }
 
