@@ -135,24 +135,14 @@ NSString * const LABEL_NO_DATA = @"No data :)~";
 #pragma mark - AlertController
 
 - (void)turnOnAlertWithMessage:(NSString *)message {
-    UIAlertController *alerController;
-    if ([message isEqualToString:@""]) {
-        alerController = [UIAlertController alertControllerWithTitle:TITLE_ALERT message:MESSAGE_REMINDER preferredStyle:UIAlertControllerStyleActionSheet];
-    } else {
-        alerController = [UIAlertController alertControllerWithTitle:TITLE_ALERT message:message preferredStyle:UIAlertControllerStyleActionSheet];
+    if (!message.length) {
+        message = MESSAGE_REMINDER;
     }
-    UIAlertAction *reloadAction = [UIAlertAction actionWithTitle:RELOAD_ACT style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    [AlertManager showAlertWithTitle:TITLE_ALERT message:message viewControler:self reloadAction:^{
         _currentPageCategory = 1;
+        self.arrCategories = [[NSMutableArray alloc] init];
         [self getCategoriesListWithAuthToken:self.user.authToken page:_currentPageCategory perPageData:_perPageData];
     }];
-    UIAlertAction *quitAction = [UIAlertAction actionWithTitle:QUIT_ACT style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
-        exit(0);
-    }];
-    [alerController addAction:reloadAction];
-    [alerController addAction:quitAction];
-    [self presentViewController:alerController
-                       animated:YES
-                     completion:nil];
 }
 
 #pragma mark - UITableViewDataSources

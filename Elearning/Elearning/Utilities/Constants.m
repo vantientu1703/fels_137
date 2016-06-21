@@ -56,10 +56,14 @@ NSString *const ERROR_MIN_LENGTH_PASSWORD = @"Password should be at least ";
 NSString *const ERROR_MAX_LENGTH_NAME = @"Name can not be longer than ";
 NSString *const ERROR_LOST_CONNECTION = @"Lost connection";
 NSString *const ERROR_UPDATE_PROFILE = @"Error update";
+NSString *const ERROR_SHOW_USER = @"Error show user";
 NSString *const UPDATE_PROFILE_SUCCESS = @"Update success";
 NSString *const LEARNED_WORD_FORMAT = @"Learned %d words";
 NSString *const CHECK_AGAIN = @"Please check again";
 NSString *const EMAIL = @"Email";
+NSString *const REMINDER_TITLE = @"Reminder";
+NSString *const ACTION_RELOAD = @"Reload";
+NSString *const ACTION_QUIT = @"Quit";
 
 #pragma mark - Data Validation Constants
 NSInteger const MAX_LENGTH_USER_NAME = 50;

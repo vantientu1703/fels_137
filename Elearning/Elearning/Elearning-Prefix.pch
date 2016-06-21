@@ -24,6 +24,7 @@
 
 #import "User.h"
 #import "StoreData.h"
+#import "AlertManager.h"
 
 #endif /* Elearning_Prefix_pch */
 

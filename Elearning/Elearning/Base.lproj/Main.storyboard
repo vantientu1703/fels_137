@@ -648,21 +648,29 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIO-D8-bHS">
-                                                    <rect key="frame" x="8" y="29" width="264" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIO-D8-bHS">
+                                                    <rect key="frame" x="8" y="29" width="264" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="ZIO-D8-bHS" secondAttribute="trailing" constant="8" id="EOz-o3-w0y"/>
                                                 <constraint firstItem="91w-kJ-aiG" firstAttribute="trailing" secondItem="ZIO-D8-bHS" secondAttribute="trailing" id="FB7-sd-clV"/>
                                                 <constraint firstItem="91w-kJ-aiG" firstAttribute="top" secondItem="osW-xT-oYx" secondAttribute="top" id="ISB-j7-cBI"/>
                                                 <constraint firstItem="ZIO-D8-bHS" firstAttribute="top" secondItem="91w-kJ-aiG" secondAttribute="bottom" constant="8" symbolic="YES" id="b3i-P8-0MS"/>
+                                                <constraint firstItem="91w-kJ-aiG" firstAttribute="top" secondItem="osW-xT-oYx" secondAttribute="top" id="cHJ-jf-rQC"/>
                                                 <constraint firstItem="91w-kJ-aiG" firstAttribute="leading" secondItem="ZIO-D8-bHS" secondAttribute="leading" id="nQE-dZ-rQK"/>
+                                                <constraint firstItem="ZIO-D8-bHS" firstAttribute="leading" secondItem="osW-xT-oYx" secondAttribute="leading" constant="8" id="r67-oV-mmY"/>
                                                 <constraint firstItem="91w-kJ-aiG" firstAttribute="leading" secondItem="osW-xT-oYx" secondAttribute="leadingMargin" id="toc-NP-wBY"/>
                                                 <constraint firstItem="91w-kJ-aiG" firstAttribute="trailing" secondItem="osW-xT-oYx" secondAttribute="trailingMargin" id="ygK-w3-agZ"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="ISB-j7-cBI"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="activityContentLabel" destination="91w-kJ-aiG" id="J0B-Qp-a7b"/>

@@ -189,26 +189,18 @@ CGFloat const CELL_HEIGHT_WORDLIST = 44.f;
 #pragma mark - AlertController when disconnected
 
 - (void)turnOnAlertWithMessage:(NSString *)message {
-    UIAlertController *alerController;
     if (!message.length) {
-        alerController = [UIAlertController alertControllerWithTitle:TITLE_REMINDER message:MESSAGE_REMINDER_CHECK_INTERNET preferredStyle:UIAlertControllerStyleActionSheet];
-    } else {
-        alerController = [UIAlertController alertControllerWithTitle:TITLE_REMINDER message:message preferredStyle:UIAlertControllerStyleActionSheet];
+        message = MESSAGE_REMINDER_CHECK_INTERNET;
     }
-    UIAlertAction *reloadAction = [UIAlertAction actionWithTitle:RELOAD_ACTION style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        _currentPageWordList = 1;
+    [AlertManager showAlertWithTitle:TITLE_REMINDER message:message viewControler:self reloadAction:^{
         [self getWordListWithCategoryId:_categoryID
                                    page:_currentPageWordList
                                  option:_option];
+        self.arrCategories = [[NSMutableArray alloc] init];
+        [self getCategoriesListWithAuthToken:self.user.authToken
+                                        page:_currentPageCategory
+                                 perPageData:PER_PAGE_DATA];
     }];
-    UIAlertAction *okAction = [UIAlertAction actionWithTitle:QUIT_ACTION style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
-        exit(0);
-    }];
-    [alerController addAction:reloadAction];
-    [alerController addAction:okAction];
-    [self presentViewController:alerController
-                       animated:YES
-                     completion:nil];
 }
 #pragma mark - All Buttons
 

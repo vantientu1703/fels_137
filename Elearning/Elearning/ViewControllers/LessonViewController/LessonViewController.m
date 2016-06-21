@@ -131,23 +131,12 @@ NSInteger const NUMBER_OF_TAG = 4;
 #pragma mark - AlertController
 
 - (void)turnOnAlertWithMessage:(NSString *)message {
-    UIAlertController *alerController;
     if (!message.length) {
-        alerController = [UIAlertController alertControllerWithTitle:TITLER_REMINDER_CONTROLLER message:CHECK_INTERNET preferredStyle:UIAlertControllerStyleActionSheet];
-    } else {
-        alerController = [UIAlertController alertControllerWithTitle:TITLER_REMINDER_CONTROLLER message:message preferredStyle:UIAlertControllerStyleActionSheet];
+        message = CHECK_INTERNET;
     }
-    UIAlertAction *reloadAction = [UIAlertAction actionWithTitle:RELOAD_ACT_CONTROLLER style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    [AlertManager showAlertWithTitle:TITLER_REMINDER_CONTROLLER message:message viewControler:self reloadAction:^{
         [self reloadDataCurrentQuestion];
     }];
-    UIAlertAction *quitAction = [UIAlertAction actionWithTitle:QUIT_ACT_CONTROLLER style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
-        exit(0);
-    }];
-    [alerController addAction:reloadAction];
-    [alerController addAction:quitAction];
-    [self presentViewController:alerController
-                       animated:YES
-                     completion:nil];
 }
 - (void)reloadDataCurrentQuestion {
     for (NSInteger i = 1; i < NUMBER_OF_TAG; i++) {
