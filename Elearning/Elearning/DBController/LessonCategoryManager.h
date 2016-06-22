@@ -21,6 +21,5 @@
 - (void)getLessonWithCategoryId:(NSString *)categoryID authToken:(NSString *)authToken;
 - (void)updateLessonWithAuthToken:(NSString *)authToken
                          lessonID:(NSString *)lessonID
-                         resultID:(NSString *)resultID
-                         answerID:(NSString *)AnswerID;
+             withArrWordAnswereds:(NSMutableArray *)arrWordAnswereds;
 @end

@@ -10,12 +10,8 @@
 #import "NetworkConnection.h"
 #import "Constants.h"
 
-NSString *const PARAM_UPDATE_CATEGORY = @"lesson[learned]=%d&\
-                                          lesson[results_attributes][0][id]=%@&\
-                                          lesson[results_attributes][0][answer_id]=%@&\
-                                          lesson[results_attributes][1][id]=%@&\
-                                          lesson[results_attributes][1][answer_id]=%@\
-                                          &auth_token=%@";
+NSString *const PARAM_UPDATE_CATEGORY = @"lesson[learned]=%d&%@auth_token=%@";
+NSString *const GROUP_ANSWER = @"lesson[results_attributes][%ld][id]=%@&lesson[results_attributes][%ld][answer_id]=%@&";
 @implementation LessonCategoryManager
 
 - (void)getLessonWithCategoryId:(NSString *)categoryID
@@ -41,10 +37,15 @@ NSString *const PARAM_UPDATE_CATEGORY = @"lesson[learned]=%d&\
 }
 - (void)updateLessonWithAuthToken:(NSString *)authToken
                          lessonID:(NSString *)lessonID
-                         resultID:(NSString *)resultID
-                         answerID:(NSString *)answerID {
+             withArrWordAnswereds:(NSMutableArray *)arrWordAnswereds {
+    
     NSString *url = [NSString stringWithFormat:@"%@/%@/%@%@", BASE_URL, LESSON,lessonID, REQUEST_EXTENSION];
-    NSString *params = [NSString stringWithFormat:PARAM_UPDATE_CATEGORY, YES, resultID, answerID, resultID, answerID, authToken];
+    NSMutableString *groupAnswer = [[NSMutableString alloc] init];
+    [arrWordAnswereds enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSString *group = [NSString stringWithFormat:GROUP_ANSWER, idx, obj[0], idx, obj[1]];
+        [groupAnswer appendString:group];
+    }];
+    NSString *params = [NSString stringWithFormat:PARAM_UPDATE_CATEGORY, YES, groupAnswer, authToken];
     [NetworkConnection responseWithUrl:url method:PATCH params:params resultRequest:^(NSDictionary *dataJSon, NSError *error) {
         __block BOOL success = NO;
         __block NSString *message = @"";

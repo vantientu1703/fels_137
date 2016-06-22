@@ -208,6 +208,7 @@ CGFloat const CELL_HEIGHT_WORDLIST = 44.f;
     if (self.arrCategories.count > 0) {
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:TITLE_FILTER message:MESSAGE_FITLER preferredStyle:UIAlertControllerStyleActionSheet];
         UIAlertAction *allAction = [UIAlertAction actionWithTitle:ALL_ACTION style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [self.btnAll1 setTitle:ALL_ACTION forState:UIControlStateNormal];
             _categoryID = nil;
             [self loadDataWithFilter];
         }];
