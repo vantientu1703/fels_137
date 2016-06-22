@@ -30,6 +30,7 @@
 @property (strong, nonatomic) NSMutableArray *arrAnswers;
 @property (strong, nonatomic) NSMutableArray *arrWords;
 @property (strong, nonatomic) NSMutableArray *arrLearnedWords;
+@property (strong, nonatomic) NSMutableArray *arrWordAnswereds;
 @property (strong, nonatomic) LessonCategoryItem *lesson;
 @property (strong, nonatomic) LoadingView *loadingView;
 @property (strong, nonatomic) User *user;
@@ -59,11 +60,15 @@ NSInteger const NUMBER_OF_TAG = 4;
     self.btnPre.enabled = NO;
     self.scrollView.delegate = self;
     self.scrollView.pagingEnabled = YES;
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(btnResultView:)];
     [self getLessonWithCategoryID:self.categoryItem.ID authToken:self.user.authToken];
+    // Init arr all words answered
+    self.arrWordAnswereds = [[NSMutableArray alloc] init];
+    for (NSInteger i = 0; i < NUMBER_OF_PAGE_SCROLLVIEW; i++) {
+        NSMutableArray *arr = [@[@"", @""] mutableCopy];
+        [self.arrWordAnswereds addObject:arr];
+    }
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(popToHomeViewController:) name:KEY_POPVIEW object:nil];
 }
-
 #pragma mark - LoadingView
 
 - (void)setupLoadingView {
@@ -86,14 +91,11 @@ NSInteger const NUMBER_OF_TAG = 4;
     }
 }
 - (IBAction)btnResultView:(id)sender {
-
-    UIStoryboard *st = [UIStoryboard storyboardWithName:SECOND_STORYBOARD bundle:nil];
-    ResultViewController *revc = [st instantiateViewControllerWithIdentifier:RESULT_VIEWCONTROLLER];
-    revc.arrLearnedWords = self.arrLearnedWords;
-    revc.arrWords = self.arrWords;
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:revc];
-    nav.modalPresentationStyle = UIModalPresentationFormSheet;
-    [self presentViewController:nav animated:YES completion:nil];
+    LessonCategoryManager *lessCategoryManager = [LessonCategoryManager new];
+    lessCategoryManager.delegate = self;
+    [lessCategoryManager updateLessonWithAuthToken:self.user.authToken
+                                          lessonID:self.lesson.ID
+                              withArrWordAnswereds:self.arrWordAnswereds];
 }
 
 #pragma mark - LessonCategoryManagerDelegate
@@ -123,6 +125,14 @@ NSInteger const NUMBER_OF_TAG = 4;
     if (success) {
         if (message.length) {
             [self turnOnAlertWithMessage:message];
+        } else {
+            UIStoryboard *st = [UIStoryboard storyboardWithName:SECOND_STORYBOARD bundle:nil];
+            ResultViewController *revc = [st instantiateViewControllerWithIdentifier:RESULT_VIEWCONTROLLER];
+            revc.arrLearnedWords = self.arrLearnedWords;
+            revc.arrWords = self.arrWords;
+            UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:revc];
+            nav.modalPresentationStyle = UIModalPresentationFormSheet;
+            [self presentViewController:nav animated:YES completion:nil];
         }
     } else {
         [self turnOnAlertWithMessage:message];
@@ -135,17 +145,12 @@ NSInteger const NUMBER_OF_TAG = 4;
         message = CHECK_INTERNET;
     }
     [AlertManager showAlertWithTitle:TITLER_REMINDER_CONTROLLER message:message viewControler:self reloadAction:^{
-        [self reloadDataCurrentQuestion];
+        LessonCategoryManager *lessCategoryManager = [LessonCategoryManager new];
+        lessCategoryManager.delegate = self;
+        [lessCategoryManager updateLessonWithAuthToken:self.user.authToken
+                                              lessonID:self.lesson.ID
+                                  withArrWordAnswereds:self.arrWordAnswereds];
     }];
-}
-- (void)reloadDataCurrentQuestion {
-    for (NSInteger i = 1; i < NUMBER_OF_TAG; i++) {
-        [self setColorForButtonNoSelectWithTag:i];
-    }
-    _numberOfLearnedWords--;
-    self.labelTotalWords.text = [NSString stringWithFormat:@"%ld/%lu", _numberOfLearnedWords, NUMBER_OF_PAGE_SCROLLVIEW];
-    NSMutableArray *arr = [@[@"",@""] mutableCopy];
-    [self.arrLearnedWords replaceObjectAtIndex:_pagingAtScrollView withObject:arr];
 }
 - (void)loadData {
     self.arrWords = self.lesson.arrWords;
@@ -265,14 +270,14 @@ NSInteger const NUMBER_OF_TAG = 4;
             }
             self.arrLearnedWords[_pagingAtScrollView] = arr;
         }
-        LessonCategoryManager *lessCategoryManager = [LessonCategoryManager new];
-        lessCategoryManager.delegate = self;
         WordItem *wordItem = [WordItem new];
         wordItem = [DBUtil dbItemToWordItem:self.arrWords[_pagingAtScrollView]];
-        [lessCategoryManager updateLessonWithAuthToken:self.user.authToken
-                                              lessonID:self.lesson.ID
-                                              resultID:wordItem.resultID
-                                              answerID:answerItem.ID];
+        NSMutableArray *arr = [@[wordItem.resultID, answerItem.ID] mutableCopy];
+        [self.arrWordAnswereds replaceObjectAtIndex:_pagingAtScrollView withObject:arr];
+        if (_numberOfLearnedWords == NUMBER_OF_PAGE_SCROLLVIEW) {
+            self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(btnResultView:)];
+        }
+        
     }
 }
 - (void)setColorForButtonNoSelectWithTag:(NSInteger)tag {
