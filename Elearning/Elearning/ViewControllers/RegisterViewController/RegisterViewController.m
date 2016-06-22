@@ -33,7 +33,7 @@
     [registerManager doLogout];
 }
 
-- (IBAction)TurnOffKeyboard:(id)sender {
+- (IBAction)turnOffKeyboard:(id)sender {
     [self.view endEditing:YES];
 }
 
@@ -47,6 +47,7 @@
 }
 
 - (IBAction)btnDone:(id)sender {
+    [self.view endEditing:YES];
     self.loadingView = [[LoadingView alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [self.view addSubview:self.loadingView];
     self.lblAlert.text = @"";
