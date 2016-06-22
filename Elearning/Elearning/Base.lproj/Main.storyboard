@@ -490,6 +490,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="lblAlert" destination="Lxm-0R-DDK" id="jSN-6S-h1Y"/>
+                        <outlet property="scrollView" destination="bzv-K8-vAq" id="O5P-XR-ZEk"/>
                         <outlet property="txtEmail" destination="Tw0-YG-A9L" id="p39-My-uUP"/>
                         <outlet property="txtFullName" destination="IiM-dz-OOs" id="n99-3E-yiR"/>
                         <outlet property="txtPassword" destination="54d-gz-x3t" id="QAK-ja-qVh"/>
@@ -785,16 +786,6 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aIa-B3-9uV" customClass="TPKeyboardAvoidingScrollView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rEN-BW-osy">
-                                        <rect key="frame" x="66" y="276" width="74" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="74" id="P6D-Tu-hD5"/>
-                                            <constraint firstAttribute="height" constant="21" id="y87-tJ-pOE"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vrw-ig-mZ5">
                                         <rect key="frame" x="0.0" y="0.0" width="321" height="567"/>
                                         <subviews>
@@ -1036,10 +1027,8 @@
                                     <constraint firstAttribute="bottom" secondItem="Vrw-ig-mZ5" secondAttribute="bottom" id="3lT-oA-QgZ"/>
                                     <constraint firstAttribute="trailing" secondItem="Vrw-ig-mZ5" secondAttribute="trailing" id="4ZP-m5-b0m"/>
                                     <constraint firstItem="Vrw-ig-mZ5" firstAttribute="centerX" secondItem="aIa-B3-9uV" secondAttribute="centerX" id="8dC-fD-jaU"/>
-                                    <constraint firstItem="rEN-BW-osy" firstAttribute="leading" secondItem="40z-7l-DpR" secondAttribute="trailing" constant="17" id="AsQ-Pz-hNQ"/>
                                     <constraint firstItem="Vrw-ig-mZ5" firstAttribute="leading" secondItem="aIa-B3-9uV" secondAttribute="leading" id="JZk-Io-PkR"/>
                                     <constraint firstItem="Vrw-ig-mZ5" firstAttribute="centerY" secondItem="aIa-B3-9uV" secondAttribute="centerY" id="KOI-fW-LBa"/>
-                                    <constraint firstItem="rEN-BW-osy" firstAttribute="top" secondItem="fj0-cx-Qgh" secondAttribute="bottom" constant="17" id="eEr-i2-nYt"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -1081,6 +1070,7 @@
                     <connections>
                         <outlet property="imgAvatar" destination="mPg-8p-qFq" id="8c4-b7-VwP"/>
                         <outlet property="lblAlert" destination="cNz-P7-DRd" id="wuF-ie-GPj"/>
+                        <outlet property="scrollView" destination="aIa-B3-9uV" id="uX4-Ov-rMw"/>
                         <outlet property="txtEmail" destination="vPF-08-UoL" id="9wq-Em-cTv"/>
                         <outlet property="txtFullName" destination="ZYF-tX-Eio" id="vN0-k8-AO7"/>
                         <outlet property="txtNewPassword" destination="oSl-iA-Yod" id="pKL-5U-FFN"/>

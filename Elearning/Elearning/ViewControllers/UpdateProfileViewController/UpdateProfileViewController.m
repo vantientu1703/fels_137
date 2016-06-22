@@ -17,6 +17,7 @@
 @property (strong, nonatomic) LoadingView *loadingView;
 @property (strong, nonatomic) UIImagePickerController *avatarPicker;
 @property (strong, nonatomic) NSString *avatarString;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UITextField *txtEmail;
 @property (weak, nonatomic) IBOutlet UITextField *txtNewPassword;
 @property (weak, nonatomic) IBOutlet UITextField *txtRetypePassword;
@@ -65,6 +66,10 @@
 }
 
 - (IBAction)btnUpdate:(id)sender {
+    [self updateProfile];
+}
+
+- (void)updateProfile {
     [self.view endEditing:YES];
     self.loadingView = [[LoadingView alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [self.view addSubview:self.loadingView];
@@ -135,9 +140,15 @@
 
 #pragma mark - UpdateProfileManagerDelegate
 - (void)didResponseWithMessage:(NSString *)message withError:(NSError *)error {
+    CGFloat height = CGRectGetHeight(self.lblAlert.frame);
+    self.scrollView.contentOffset = CGPointMake(0.f, height);
     [self.loadingView removeFromSuperview];
     self.loadingView = nil;
     self.lblAlert.text = message;
+    if ([message isEqualToString:UPDATE_PROFILE_SUCCESS]) {
+        User *user = [StoreData getUser];
+        [[SDImageCache sharedImageCache] removeImageForKey:user.avatar fromDisk:YES];
+    }
 }
 
 #pragma mark - Open other screen

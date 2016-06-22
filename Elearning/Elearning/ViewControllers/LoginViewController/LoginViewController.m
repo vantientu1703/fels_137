@@ -30,7 +30,6 @@ BOOL _rememberMeChecked;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [self checkLogin];
     self.title = @"Login";
     self.lblAlert.text = @"";
     [self checkRememberMe];
@@ -42,10 +41,17 @@ BOOL _rememberMeChecked;
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
+    if (self.txtEmail.text.length && self.txtPassword.text.length) {
+        [self login];
+    }
     return YES;
 }
 
 - (IBAction)btnLogin:(id)sender {
+    [self login];
+}
+
+- (void)login {
     [self.view endEditing:YES];
     self.loadingView = [[LoadingView alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [self.view addSubview:self.loadingView];
