@@ -36,16 +36,17 @@ BOOL _rememberMeChecked;
     [self checkRememberMe];
 }
 
-- (IBAction)TurnOffKeyboard:(id)sender {
+- (IBAction)turnOffKeyboard:(id)sender {
     [self.view endEditing:YES];
 }
 
- -(BOOL)textFieldShouldReturn:(UITextField *)textField {
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
     return YES;
 }
 
 - (IBAction)btnLogin:(id)sender {
+    [self.view endEditing:YES];
     self.loadingView = [[LoadingView alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [self.view addSubview:self.loadingView];
     self.lblAlert.text = @"";
