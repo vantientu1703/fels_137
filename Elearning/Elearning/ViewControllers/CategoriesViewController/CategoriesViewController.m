@@ -55,9 +55,7 @@ NSString * const LABEL_NO_DATA = @"No data :)~";
     self.tableView.dataSource = self;
     self.user = [StoreData getUser];
     self.arrCategories = [[NSMutableArray alloc] init];
-}
-- (void) viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+    
     self.title = @"Categories";
     [self setupLoadingView];
     _perPageData = 10;
@@ -71,6 +69,7 @@ NSString * const LABEL_NO_DATA = @"No data :)~";
 #pragma mark - LoadingView
 - (void)setupLoadingView {
     self.loadingView = [[LoadingView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.loadingView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:self.loadingView];
 }
 - (void)animateDismissLoadingView {
