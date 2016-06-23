@@ -83,6 +83,7 @@ CGFloat const CELL_HEIGHT_WORDLIST = 44.f;
 
 - (void)setupLoadingView {
     self.loadingView = [[LoadingView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.loadingView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:self.loadingView];
 }
 - (void)animateDismissLoadingView {
