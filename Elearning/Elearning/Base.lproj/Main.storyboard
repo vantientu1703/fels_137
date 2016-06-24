@@ -521,7 +521,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hgo-fW-QVD">
                                 <rect key="frame" x="0.0" y="20" width="320" height="138"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noavatar.png" translatesAutoresizingMaskIntoConstraints="NO" id="4C8-6z-lvk">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noavatar.png" translatesAutoresizingMaskIntoConstraints="NO" id="4C8-6z-lvk">
                                         <rect key="frame" x="25" y="20" width="115" height="115"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="115" id="45B-78-kMb"/>
@@ -645,10 +645,10 @@
                                         <rect key="frame" x="0.0" y="28" width="280" height="59"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" tableViewCell="CSi-kO-yR0" id="osW-xT-oYx">
-                                            <rect key="frame" x="0.0" y="0.0" width="280" height="58"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="280" height="58.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91w-kJ-aiG">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91w-kJ-aiG">
                                                     <rect key="frame" x="8" y="0.0" width="264" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -662,19 +662,34 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="91w-kJ-aiG" secondAttribute="bottom" constant="29.5" id="3yj-aE-jsX"/>
                                                 <constraint firstAttribute="trailing" secondItem="ZIO-D8-bHS" secondAttribute="trailing" constant="8" id="EOz-o3-w0y"/>
                                                 <constraint firstItem="91w-kJ-aiG" firstAttribute="trailing" secondItem="ZIO-D8-bHS" secondAttribute="trailing" id="FB7-sd-clV"/>
                                                 <constraint firstItem="91w-kJ-aiG" firstAttribute="top" secondItem="osW-xT-oYx" secondAttribute="top" id="ISB-j7-cBI"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ZIO-D8-bHS" secondAttribute="trailing" id="J8j-nu-QUg"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ZIO-D8-bHS" secondAttribute="bottom" constant="1.5" id="MfT-8P-N52"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="ZIO-D8-bHS" secondAttribute="leading" id="N3o-o9-hkm"/>
                                                 <constraint firstItem="ZIO-D8-bHS" firstAttribute="top" secondItem="91w-kJ-aiG" secondAttribute="bottom" constant="8" symbolic="YES" id="b3i-P8-0MS"/>
                                                 <constraint firstItem="91w-kJ-aiG" firstAttribute="top" secondItem="osW-xT-oYx" secondAttribute="top" id="cHJ-jf-rQC"/>
+                                                <constraint firstItem="91w-kJ-aiG" firstAttribute="top" secondItem="osW-xT-oYx" secondAttribute="topMargin" constant="-8" id="caq-c0-3mL"/>
                                                 <constraint firstItem="91w-kJ-aiG" firstAttribute="leading" secondItem="ZIO-D8-bHS" secondAttribute="leading" id="nQE-dZ-rQK"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="91w-kJ-aiG" secondAttribute="leading" id="qhQ-4d-Qri"/>
                                                 <constraint firstItem="ZIO-D8-bHS" firstAttribute="leading" secondItem="osW-xT-oYx" secondAttribute="leading" constant="8" id="r67-oV-mmY"/>
                                                 <constraint firstItem="91w-kJ-aiG" firstAttribute="leading" secondItem="osW-xT-oYx" secondAttribute="leadingMargin" id="toc-NP-wBY"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="91w-kJ-aiG" secondAttribute="trailing" id="uO1-Ci-QrZ"/>
                                                 <constraint firstItem="91w-kJ-aiG" firstAttribute="trailing" secondItem="osW-xT-oYx" secondAttribute="trailingMargin" id="ygK-w3-agZ"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
+                                                    <exclude reference="FB7-sd-clV"/>
                                                     <exclude reference="ISB-j7-cBI"/>
+                                                    <exclude reference="cHJ-jf-rQC"/>
+                                                    <exclude reference="nQE-dZ-rQK"/>
+                                                    <exclude reference="toc-NP-wBY"/>
+                                                    <exclude reference="ygK-w3-agZ"/>
+                                                    <exclude reference="EOz-o3-w0y"/>
+                                                    <exclude reference="b3i-P8-0MS"/>
+                                                    <exclude reference="r67-oV-mmY"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -948,7 +963,7 @@
                                                 <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noavatar.png" translatesAutoresizingMaskIntoConstraints="NO" id="mPg-8p-qFq">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noavatar.png" translatesAutoresizingMaskIntoConstraints="NO" id="mPg-8p-qFq">
                                                 <rect key="frame" x="161" y="370" width="120" height="120"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="120" id="H8x-tA-ERU"/>

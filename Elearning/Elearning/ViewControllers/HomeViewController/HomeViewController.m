@@ -33,9 +33,34 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Profile";
+    User *user = [StoreData getUser];
+    [self displayWithUser:user];
+}
+
+- (void)displayWithUser:(User *)user {
+    self.txtName.text = user.name;
+    self.txtEmail.text = user.email;
+    self.txtLearned.text = [NSString stringWithFormat:LEARNED_WORD_FORMAT, user.learnedWords];
+    self.userActivityArray = [[NSMutableArray alloc] init];
+    self.userActivityArray = user.activities;
+    [self.userActivityTableView reloadData];
+    NSURL *url = [NSURL URLWithString:user.avatar];
+    [self.imgAvatar sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"place.png"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        if (!image) {
+            self.imgAvatar.image = [UIImage imageNamed:@"noavatar.png"];
+        }
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
+    if ([StoreData getShowUser]) {
+        [StoreData setShowUser:NO];
+        [self showUser];
+    }
+}
+
+- (void)showUser {
     self.loadingView = [[LoadingView alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [self.view addSubview:self.loadingView];
     HomeManager *homeManager = [[HomeManager alloc] init];
@@ -60,18 +85,7 @@
     [self.loadingView removeFromSuperview];
     self.loadingView = nil;
     if (!error && !message.length && user) {
-        self.txtName.text = user.name;
-        self.txtEmail.text = user.email;
-        self.txtLearned.text = [NSString stringWithFormat:LEARNED_WORD_FORMAT, user.learnedWords];
-        self.userActivityArray = [[NSMutableArray alloc] init];
-        self.userActivityArray = user.activities;
-        [self.userActivityTableView reloadData];
-        NSURL *url = [NSURL URLWithString:user.avatar];
-        [self.imgAvatar sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"place.png"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-            if (!image) {
-                self.imgAvatar.image = [UIImage imageNamed:@"noavatar.png"];
-            }
-        }];
+        [self displayWithUser:user];
     } else {
         [AlertManager showAlertWithTitle:REMINDER_TITLE message:message viewControler:self reloadAction:^{
             HomeManager *homeManager = [[HomeManager alloc] init];
@@ -107,11 +121,21 @@
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewAutomaticDimension;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewAutomaticDimension;
+}
+
 #pragma mark - Open other screen
 - (void)goUpdateProfile {
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"UpdateProfileViewController"];
-    [self.navigationController pushViewController:vc animated:YES];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    nav.modalPresentationStyle = UIModalPresentationFormSheet;
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 - (void)goWords {

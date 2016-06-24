@@ -32,4 +32,10 @@
 
 + (void)clearLogin;
 
++ (BOOL)getShowUser;
+
++ (void)setShowUser:(BOOL)isShow;
+
++ (void)clearShowUser;
+
 @end

@@ -33,9 +33,9 @@
     NSInteger _currentPageCategory;
     NSInteger _totalPagesCategory;
     NSInteger _perPageData;
+    CGFloat _heightCellCategory;
 }
 
-CGFloat const CATEGORY_CELL_HEIGHT = 80.f;
 NSString *const TITLE_ALERT = @"Reminder";
 NSString *const TITLE_ACTION_RELOAD = @"Reload";
 NSString *const TITLE_ACTION_QUIT = @"Quit";
@@ -160,14 +160,13 @@ NSString * const LABEL_NO_DATA = @"No data :)~";
         cell.labelTotalLearnedWord.text = [NSString stringWithFormat:NO_LEARN_WORD];
     }
     [cell.imageViewCategory sd_setImageWithURL:categoryItem.url placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
-    CGSize size = [UIScreen mainScreen].bounds.size;
-    UIView *separatorLineView = [[UIView alloc] initWithFrame:CGRectMake(10.0f, CATEGORY_CELL_HEIGHT - 1.f, size.width - 10.0f, 1.0f)];
-    separatorLineView.backgroundColor = [UIColor lightGrayColor];
-    [cell.contentView addSubview:separatorLineView];
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return CATEGORY_CELL_HEIGHT;
+    return UITableViewAutomaticDimension;
+}
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewAutomaticDimension;
 }
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == self.arrCategories.count - 1) {
