@@ -133,6 +133,7 @@ NSInteger const NUMBER_OF_TAG = 4;
             UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:revc];
             nav.modalPresentationStyle = UIModalPresentationFormSheet;
             [self presentViewController:nav animated:YES completion:nil];
+            [StoreData setShowUser:TRUE];
         }
     } else {
         [self turnOnAlertWithMessage:message];

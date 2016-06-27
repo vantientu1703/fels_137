@@ -29,10 +29,10 @@
     return result;
 }
 
-+ (void)responseWithUrl:(NSString *)url
-                 method:(METHODS)method
-                 params:(NSString *)params
-          resultRequest:(ResultRequest)complete {
++ (NSURLSessionDataTask *)responseWithUrl:(NSString *)url
+                                   method:(METHODS)method
+                                   params:(NSString *)params
+                            resultRequest:(ResultRequest)complete {
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     if (method == GET) {
         // GET method
@@ -48,20 +48,17 @@
     }
     request.HTTPMethod = [self formatMethodTypeToString:method];
     NSURLSession *session = [NSURLSession sharedSession];
-    [[session dataTaskWithRequest:request
-                completionHandler:^(NSData *data,
-                                    NSURLResponse *response,
-                                    NSError *error) {
-                    NSError *errors;
-                    NSDictionary *dic;
-                    if (data) {
-                        dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&errors];
-                    }
-                    if (complete) {
-                        complete(dic,error);
-                    }
-                }
-      ] resume];
+    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        NSDictionary *dic;
+        if (data) {
+            dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+        }
+        if (complete) {
+            complete(dic, error);
+        }
+    }];
+    [dataTask resume];
+    return dataTask;
 }
 
 @end

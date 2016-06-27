@@ -19,4 +19,5 @@
                        password:(NSString *)password
            passwordConfirmation:(NSString *)passwordConfirmation
                          avatar:(NSString *)avatarString;
+- (void)cancelUpdateProfile;
 @end

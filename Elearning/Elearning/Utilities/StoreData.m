@@ -94,4 +94,19 @@
     [defaults removeObjectForKey:@"is_login"];
 }
 
++ (BOOL)getShowUser {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    return [defaults boolForKey:@"is_show"];
+}
+
++ (void)setShowUser:(BOOL)isShow {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setBool:isShow forKey:@"is_show"];
+}
+
++ (void)clearShowUser {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults removeObjectForKey:@"is_show"];
+}
+
 @end

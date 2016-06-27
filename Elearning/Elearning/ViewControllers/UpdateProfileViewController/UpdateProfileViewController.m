@@ -30,12 +30,15 @@
 
 @implementation UpdateProfileViewController
 
+UpdateProfileManager *_updateProfileManager;
+BOOL _isUpdate;
+BOOL _isAvatarChanged;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Update profile";
     self.lblAlert.text = @"";
-    User *user = [[User alloc] init];
-    user = [StoreData getUser];
+    User *user = [StoreData getUser];
     self.txtEmail.text = user.email;
     self.txtNewPassword.text = @"";
     self.txtRetypePassword.text = @"";
@@ -46,6 +49,8 @@
             self.imgAvatar.image = [UIImage imageNamed:@"noavatar.png"];
         }
     }];
+    _updateProfileManager = [[UpdateProfileManager alloc] init];
+    _updateProfileManager.delegate = self;
     // Click avatar
     [self.imgAvatar setUserInteractionEnabled:YES];
     UITapGestureRecognizer *tapOnAvatar = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapOnAvatarAction:)];
@@ -62,11 +67,25 @@
 }
 
 - (IBAction)btnCancel:(id)sender {
+    [self.view endEditing:YES];
+    [_updateProfileManager cancelUpdateProfile];
     [self goHome];
 }
 
 - (IBAction)btnUpdate:(id)sender {
-    [self updateProfile];
+    [self.view endEditing:YES];
+    User *user = [StoreData getUser];
+    NSString *email = [NSString stringWithFormat:@"%@", self.txtEmail.text];
+    NSString *name = [NSString stringWithFormat:@"%@", self.txtFullName.text];
+    BOOL emailChanged = ![user.email isEqualToString:email];
+    BOOL nameChanged = ![user.name isEqualToString:name];
+    if (emailChanged || nameChanged || self.txtNewPassword.text.length || self.txtRetypePassword.text.length) {
+        _isUpdate = YES;
+    }
+    if (_isUpdate) {
+        _isUpdate = NO;
+        [self updateProfile];
+    }
 }
 
 - (void)updateProfile {
@@ -75,17 +94,15 @@
     [self.view addSubview:self.loadingView];
     self.lblAlert.text = @"";
     self.avatarString = @"";
-    UpdateProfileManager *updateProfileManager = [[UpdateProfileManager alloc] init];
-    updateProfileManager.delegate = self;
     if (self.imgAvatar.image) {
         self.avatarString = [UIImageJPEGRepresentation(self.imgAvatar.image, 0.4) base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
     }
     NSString *strImageData = [self.avatarString stringByReplacingOccurrencesOfString:@"+" withString:@"%2B"];
-    [updateProfileManager doUpdateProfileWithName:self.txtFullName.text
-                                            email:self.txtEmail.text
-                                         password:self.txtNewPassword.text
-                             passwordConfirmation:self.txtRetypePassword.text
-                                           avatar:strImageData];
+    [_updateProfileManager doUpdateProfileWithName:self.txtFullName.text
+                                             email:self.txtEmail.text
+                                          password:self.txtNewPassword.text
+                              passwordConfirmation:self.txtRetypePassword.text
+                                            avatar:strImageData];
 }
 
 #pragma mark - Avatar click
@@ -128,14 +145,27 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     UIImage *chosenImage = info[UIImagePickerControllerOriginalImage];
-    CGSize viewSize = CGSizeMake(self.imgAvatar.frame.size.width, self.imgAvatar.frame.size.height);
+    CGFloat x0 = self.imgAvatar.frame.size.width * 5.f;
+    CGFloat y0 = self.imgAvatar.frame.size.height * 5.f;
+    CGFloat x1 = chosenImage.size.width;
+    CGFloat y1 = chosenImage.size.height;
+    CGFloat x2 = 0.f;
+    CGFloat y2 = 0.f;
+    if (x1 > y1) {
+        x2 = x0;
+        y2 = (x2 * y1) / x1;
+    } else {
+        y2 = y0;
+        x2 = (y2 * x1) / y1;
+    }
+    CGSize viewSize = CGSizeMake(x2, y2);
     UIGraphicsBeginImageContext(viewSize);
     [chosenImage drawInRect:CGRectMake(0, 0, viewSize.width, viewSize.height)];
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    NSData *imgData = UIImagePNGRepresentation(newImage);
-    [self.imgAvatar setImage:[[UIImage alloc] initWithData:imgData]];
+    self.imgAvatar.image = newImage;
     [picker dismissViewControllerAnimated:YES completion:nil];
+    _isUpdate = YES;
+    _isAvatarChanged = YES;
 }
 
 #pragma mark - UpdateProfileManagerDelegate
@@ -146,14 +176,17 @@
     self.loadingView = nil;
     self.lblAlert.text = message;
     if ([message isEqualToString:UPDATE_PROFILE_SUCCESS]) {
-        User *user = [StoreData getUser];
-        [[SDImageCache sharedImageCache] removeImageForKey:user.avatar fromDisk:YES];
+        if (_isAvatarChanged) {
+            User *user = [StoreData getUser];
+            [[SDImageCache sharedImageCache] removeImageForKey:user.avatar fromDisk:YES];
+        }
+        [StoreData setShowUser:TRUE];
     }
 }
 
 #pragma mark - Open other screen
 - (void)goHome {
-    [self.navigationController popViewControllerAnimated:YES];
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

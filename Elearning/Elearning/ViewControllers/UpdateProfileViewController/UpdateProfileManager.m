@@ -16,6 +16,8 @@
 
 @implementation UpdateProfileManager
 
+NSURLSessionDataTask *_dataTask;
+
 - (void)doUpdateProfileWithName:(NSString *)name
                           email:(NSString *)email
                        password:(NSString *)password
@@ -32,7 +34,7 @@
         User *user = [StoreData getUser];
         NSString *urlUpdateProfile = [NSString stringWithFormat:@"%@%@%ld%@", BASE_URL, USER_REQUEST, user.userId, REQUEST_EXTENSION];
         NSString *paramUpdateProfile = [NSString stringWithFormat:@"%@%@&%@%@&%@%@&%@%@&%@%@&%@%@", USER_NAME, name, USER_EMAIL, email, USER_PASSWORD, password, USER_PASSWORD_CONFIRMATION, passwordConfirmation, USER_AVATAR, avatarString, AUTH_TOKEN, user.authToken];
-        [NetworkConnection responseWithUrl:urlUpdateProfile method:PATCH params:paramUpdateProfile resultRequest:^(NSDictionary *dic, NSError *error) {
+        _dataTask = [NetworkConnection responseWithUrl:urlUpdateProfile method:PATCH params:paramUpdateProfile resultRequest:^(NSDictionary *dic, NSError *error) {
             NSString *message = ERROR_LOST_CONNECTION;
             if (!error && dic) {
                 if (!dic[@"message"] && !dic[@"error"]) {
@@ -51,6 +53,12 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.delegate didResponseWithMessage:errorMessage withError:nil];
         });
+    }
+}
+
+- (void)cancelUpdateProfile {
+    if (_dataTask.state == NSURLSessionTaskStateRunning) {
+        [_dataTask cancel];
     }
 }
 
